@@ -3,7 +3,7 @@ class SubscribeController < ApplicationController
     logger.info "suscripcion #{params.inspect}"
     user = user_params(params)
     MailchimpWrapper.subscribe(user)
-    render 'refinery/pages/home'
+    render 'refinery/pages/gracias'
   rescue Mailchimp::Error => e
     logger.error "ERROR mailchimp #{e.message} #{params.inspect}"
   end
