@@ -1,1 +1,6 @@
 <%= render '/refinery/content_page' %>
+  <%= form_tag '/suscribir', target: "_top" do %>
+  <%= text_field_tag :first_name, nil, type: "text", placeholder: "Tu nombre" %>
+  <%= text_field_tag :email, nil, type: "email", placeholder: "Tu email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+  <%= submit_tag "Regístrate" %>
+  <% end %>
