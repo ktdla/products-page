@@ -1,0 +1,40 @@
+footer {
+  background-color: $black;
+  color: $light-gray;
+  font-family: 'Lato-Light';
+  font-size: 16px;
+  overflow: hidden;
+  padding: 75px 0;
+  .social-links {
+    border-bottom: 1px solid #837F7F;
+    font-size: 40px;
+    padding-bottom: 75px;
+    li {
+      margin-bottom: 0;
+      margin-right: 18px;
+    }
+  }
+  a { color: $light-gray; }
+  .right {
+    @include span-columns(3);
+    margin-right: 80px;
+    margin: 0 auto;
+    ul { padding-left: 80px; } 
+  }
+  .center {
+    @include span-columns(6);
+    text-align: center;
+    ul { margin: 0 0 50px; }
+    li {
+      display: inline-block;
+      list-style-type: none;
+      &:last-child { margin-right: 0; }
+    }
+    .contact li { margin-right: 50px; }
+    .contact i { margin-right: 10px; }
+  }
+  .left {
+    @include span-columns(3);
+    text-align: center;
+  }
+}

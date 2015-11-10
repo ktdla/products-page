@@ -50,8 +50,12 @@ group :development do
   gem 'spring'
 end
 
-group :production, :staging do
+group :production do
   gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :staging do
   gem 'rails_12factor'
 end
 
