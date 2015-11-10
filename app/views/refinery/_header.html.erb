@@ -1,4 +1,19 @@
-<h1 id='logo'>
-  <%= link_to Refinery::Core.site_name, refinery.root_path %>
-</h1>
-<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+<%= link_to refinery.root_path do %>
+  <%= image_tag "ifurniture-logo.png", :class => "logo" %>
+<% end %>
+<ul class="language" id='locale'>
+  <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+      <li>
+        <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+      </li>
+  <% end %>
+</ul>
+<nav>
+  <ul id="navigation-menu">
+    <% if locale.to_s == "es" %>
+      <%= link_to_in_li "HOME", '/' %>
+    <% else locale.to_s == "en" %>
+      <%= link_to_in_li "HOME", '/' + locale.to_s %>
+    <% end %>
+  </ul>
+</nav>
