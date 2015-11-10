@@ -1,3 +1,5 @@
+@include font-face(Dekar, 'Dekar', $asset-pipeline: true);
+
 h1 {
   font-family: Dekar;
   font-size: 40px;
