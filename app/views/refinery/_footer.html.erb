@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="left">
+    <%= link_to refinery.root_path do %>
+      <%= image_tag "ifurniture-logo2.png", :class => "logo" %>
+    <% end %>
+  </div>
+  <div class="center">
+    <ul class="contact">
+      <li><i class="fa fa-envelope"></i> hello@ifurniture.pe</li>
+      <li><i class="fa fa-phone"></i> (01)-2222222</li>
+      <li><i class="fa fa-map-marker"></i> Ubícanos</li>
+    </ul>
+    <ul class="social-links">
+      <li><i class="fa fa-facebook-square"></i></li>
+      <li><i class="fa fa-twitter-square"></i></li>
+      <li><i class="fa fa-instagram"></i></li>
+      <li><i class="fa fa-pinterest-square"></i></li>
+      <li><i class="fa fa-vimeo-square"></i></li>
+      <li><i class="fa fa-youtube-square"></i></li>
+    </ul>
+    <p>Hecho en Perú | <%= t('.copyright', :year => Time.now.year,
+                      :site_name => Refinery::Core.site_name) %></p>
+    <p>Desarrollado por devAcademy</p>
+  </div>
+  <nav class="right">
+    <ul id="navigation-menu">
+      <% if locale.to_s == "es" %>
+        <%= link_to_in_li "iLamps", '/ilamps' %>
+        <%= link_to_in_li "iKids", '/ikids' %>
+        <%= link_to_in_li "iCoworking", '/icoworking' %>
+        <%= link_to_in_li "iChristmas", '/ichristmas' %>
+      <% else locale.to_s == "en" %>
+        <%= link_to_in_li "iLamps", '/ilamps' + locale.to_s  %>
+        <%= link_to_in_li "iKids", '/ikids' + locale.to_s  %>
+        <%= link_to_in_li "iCoworking", '/icoworking' + locale.to_s  %>
+        <%= link_to_in_li "iChristmas", '/ichristmas' + locale.to_s  %>
+      <% end %>
+    </ul>
+  </nav>
+</div>
