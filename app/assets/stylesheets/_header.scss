@@ -3,10 +3,7 @@ header {
     height: 40px; 
     margin-top: 50px;
   }
-  border-top: 3px solid $orange;
-  box-shadow: 2px 2px 5px $light-gray;
   overflow: hidden;
-  padding-bottom: 15px;
   .language {
     float: right;
     font-size: 14px;
@@ -57,3 +54,19 @@ header {
     }
   }
 }
+.sticky {
+  border-top: 3px solid $orange;
+  box-shadow: 2px 2px 5px $light-gray;
+  padding-bottom: 15px;
+}
+.fixed {
+  background-color: white;
+  left:0;
+  position: fixed;
+  top:0; 
+  width: 100%;
+  z-index: 1;
+  ul.language { display: none; } 
+  .logo { margin-top: 15px; }
+}
+.fixed.sticky { padding-bottom: 10px; }
