@@ -1,10 +1,9 @@
 header {
+  z-index: 1;
   .logo { 
     height: 40px; 
     margin-top: 50px;
   }
-  overflow: hidden;
-  box-shadow: 2px 2px 5px $light-gray;
   .language {
     float: right;
     font-size: 14px;
@@ -28,6 +27,7 @@ header {
     clear: right;
     float: right;
     margin-top: 15px;
+    position: relative;
   }
   #navigation-menu {
     font-size: .9em;
@@ -40,21 +40,29 @@ header {
       margin-bottom: 0;
       margin-right: 30px;
       text-align: center;
+      &:last-child { margin-right: 0; }
     }
     a {
       display: inline-block;
       &:hover { color: $orange; }
     }
-    .suscribete {
+    .suscribe {
+      background-color: white;
       border-radius: 10px;
       border: 2px solid $light-gray;
+      color: $black;
       cursor: pointer;
-      margin-right: 0;
+      font-family: Dekar;
+      font-size: 1em;
+      height: auto;
+      line-height: 25px;
       padding: 5px 10px;
+      width: auto;
       &:hover { color: $orange; }
     }
   }
 }
+
 .sticky {
   border-top: 3px solid $orange;
   box-shadow: 2px 2px 5px $light-gray;
@@ -71,3 +79,60 @@ header {
   .logo { margin-top: 15px; }
 }
 .fixed.sticky { padding-bottom: 10px; }
+
+//div subscribe
+.dropdown-caret, .caret-outer, .caret-inner { position: absolute; }
+.dropdown-caret {
+  float: right;
+  height: 10px;
+  overflow: hidden;
+  right: 36px;
+  top: -10px;
+  width: 18px;
+}
+.caret-outer {
+  border-bottom: 10px solid #8899a6;
+  border-bottom-color: rgba(0,0,0,0.1);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  display: inline-block;
+  height: auto;
+  left: 0;
+  margin-left: -2px;
+  top: 0;
+  width: auto;
+}
+.caret-inner {
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-bottom-color: rgba(255,255,255,0.98);
+  left: 2px;
+  margin-left: -2px;
+  top: 2px;
+}
+.header-register {
+  background-color: white;
+  border: 2px solid $light-gray;
+  box-shadow: 1px 2px 2px $light-gray;
+  display: none;
+  float: right;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 47px;
+  z-index: 2;
+  input, button {
+    height: 35px;
+    width: 250px;
+  }
+  input {
+    font-size: 18px;
+    outline: 0;
+    padding: 10px;
+  }
+  button {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}

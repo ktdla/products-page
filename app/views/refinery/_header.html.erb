@@ -17,14 +17,23 @@
           <%= link_to_in_li "iKids", '/categorias' %>
           <%= link_to_in_li "iCoworking", '/categorias' %>
           <%= link_to_in_li "iChristmas", '/categorias' %>
-           <li class="suscribete">Suscríbete</li>
+           <li><button class="suscribe">Suscríbete</button></li>
         <% else locale.to_s == "en" %>
           <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
           <%= link_to_in_li "iKids", '/categorias' + locale.to_s  %>
           <%= link_to_in_li "iCoworking", '/categorias' + locale.to_s  %>
           <%= link_to_in_li "iChristmas", '/categorias' + locale.to_s  %>
+          <li><button class="suscribe">Subscribe</button></li>
         <% end %>
       </ul>
+      <div class="header-register">
+        <div class="dropdown-caret">
+          <div class="caret-outer"></div>
+          <div class="caret-inner"></div>
+        </div>
+        <input type="text" placeholder="Email">
+        <button>Suscríbete a nuestras noticias</button>
+      </div>
     </nav>
   </div>
 </div>

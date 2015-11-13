@@ -6,4 +6,11 @@ $(document).ready(function () {
     if (scroll >= 30) sticky.addClass('fixed');
     else sticky.removeClass('fixed');
   });
+
+//suscription header
+$(".suscribe").click(function(){
+  $(".header-register").slideToggle(0);
+});
+
+
 });
