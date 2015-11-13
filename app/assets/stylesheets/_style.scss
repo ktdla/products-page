@@ -170,7 +170,8 @@ button {
     border-radius: 10px;
     border: 2px solid $light-gray;
     color: $black;
-    font-family: Lato-light;
+    font-family: 'Lato';
+    font-weight: 300;
     font-size: 20px;
     height: 240px;
     margin-bottom: 50px;
@@ -182,7 +183,8 @@ button {
     border-radius: 10px;
     border: 2px solid $light-gray;
     color: $black;
-    font-family: Lato-light;
+    font-family: Lato;
+    font-weight: 300;
     font-size: 20px;
     height: 60px;
     margin-bottom: 32px;
@@ -199,7 +201,8 @@ button {
     border-radius: 10px;
     border: 2px solid $light-gray;
     color: $black;
-    font-family: Lato-light;
+    font-family: Lato;
+    font-weight: 300;
     font-size: 18px;
     height: 60px;
     margin-bottom: 32px;
@@ -214,7 +217,7 @@ button {
     width: 300px;
   }
 }
-.products {
+.product-description {
   overflow: hidden;
   .left {
     @include span-columns(4);
@@ -303,4 +306,56 @@ button {
       transform: translateY(-50%);
     }
   }
+}
+
+//categorias
+.products { overflow: hidden; }
+.products article {
+  overflow: hidden;
+  margin-top: 50px;
+  text-align: center;
+  @include span-columns(3);
+  &:nth-child(2n+4){ margin-right: 0; }
+  img {
+    margin: 0 auto;
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+  .title {
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+  }
+  .tagline { 
+    color: $orange; 
+    margin-top: 5px;
+  }
+}
+.filter {
+  span { color: $orange; }
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  li {
+    display: inline-block;
+    margin-right: 100px;
+    &:last-child { margin-right:20px; }
+    padding: 5px 30px;
+    &.active {
+      background-color: $orange;
+      color: white;
+    }
+  }
+  ul { display: none; }
+}
+.main { position: relative; }
+.category {
+  text-align: center;
+  h2 { margin-top: 40px; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
