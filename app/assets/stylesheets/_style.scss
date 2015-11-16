@@ -19,9 +19,9 @@ body {
 }
 
 //general
-.container { 
+.container {
   margin: 0 auto;
-  max-width: 1200px; 
+  max-width: 1200px;
 }
 section.container, section.main, section div.container { padding: 75px 0; }
 
@@ -62,7 +62,7 @@ input, textarea {
 .main {
   position: relative;
   height: 550px;
-  h1 { 
+  h1 {
     color: white;
     left: 50%;
     position: absolute;
@@ -86,12 +86,12 @@ button {
   padding: 5px 15px;
   width: 300px;
 }
-.process { 
+.process {
   article {
-    @include span-columns(3); 
+    @include span-columns(3);
     &:nth-child(4) { margin-right: 0; }
-    img { 
-      display: block; 
+    img {
+      display: block;
       margin: 0 auto;
       padding-bottom: 10px;
     }
@@ -101,22 +101,22 @@ button {
 }
 .categories {
   overflow: hidden;
-  h2 { margin-bottom: 0; } 
-  article { 
+  h2 { margin-bottom: 0; }
+  article {
     text-align: center;
     margin-top: 50px;
     @include span-columns(6);
     &:nth-child(2n+1) { margin-right: 0; }
-    img, a, .container-overlay, .overlay { 
+    img, a, .container-overlay, .overlay {
       height: 240px;
-      width: 480px; 
+      width: 480px;
     }
     a { display: block; }
-    .container-overlay { 
+    .container-overlay {
       margin: 0 auto;
       overflow: hidden;
       position: relative;
-      &:hover .overlay { 
+      &:hover .overlay {
       background-color: $orange;
       top: 0;
       transition: .2s top;
@@ -134,14 +134,14 @@ button {
       top: 100%;
     }
     .overlay { opacity: .6; }
-    .info { 
+    .info {
       color: white;
       left: 50%;
       overflow: hidden;
       transform: translateX(-50%);
-      h3 { 
+      h3 {
         font-family: Dekar;
-        font-size: 30px; 
+        font-size: 30px;
         line-height: 32px;
         margin-bottom: 20px;
       }
@@ -162,9 +162,9 @@ button {
       top: 15px;
       p { margin: 10px 0; }
       span { font-family: Lato; }
-      span.fa-stack { 
+      span.fa-stack {
         color: $orange;
-        font-size: 16px; 
+        font-size: 16px;
       }
     }
   }
@@ -180,7 +180,7 @@ button {
       color: $orange;
       display: block;
       margin-bottom: 20px;
-    } 
+    }
   }
 }
 .sponsor {
@@ -240,8 +240,8 @@ button {
   overflow: hidden;
   .left {
     @include span-columns(4);
-    ul { 
-      padding:0; 
+    ul {
+      padding:0;
       border-bottom: 2px solid $light-gray;
     }
     li {
@@ -255,9 +255,9 @@ button {
         cursor: pointer;
       }
     }
-    p { 
+    p {
       margin-top: 20px;
-      font-size: 18px; 
+      font-size: 18px;
     }
     .status {
       overflow: hidden;
@@ -343,8 +343,8 @@ button {
     display: block;
     margin-top: 10px;
   }
-  .tagline { 
-    color: $orange; 
+  .tagline {
+    color: $orange;
     margin-top: 5px;
   }
 }
@@ -373,4 +373,20 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.slides {
+  p { margin: 0; }
+  .slidesjs-navigation { display: none; }
+  .slidesjs-pagination {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+      a i { font-size: 12px; }
+      .active { color: $orange; }
+    }
+  }
 }
