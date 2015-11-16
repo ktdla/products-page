@@ -1,7 +1,7 @@
 header {
-  z-index: 1;
-  .logo { 
-    height: 40px; 
+  z-index: 20;
+  .logo {
+    height: 40px;
     margin-top: 50px;
   }
   .language {
@@ -72,10 +72,10 @@ header {
   background-color: white;
   left:0;
   position: fixed;
-  top:0; 
+  top:0;
   width: 100%;
-  z-index: 1;
-  ul.language { display: none; } 
+  z-index: 70;
+  ul.language { display: none; }
   .logo { margin-top: 15px; }
 }
 .fixed.sticky { padding-bottom: 10px; }

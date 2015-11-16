@@ -349,6 +349,7 @@ button {
       display: inline-block;
       margin-right: 10px;
       &:last-child { margin-right: 0; }
+      a i { font-size: 12px; }
     }
   }
 }
