@@ -339,5 +339,16 @@ button {
   transform: translate(-50%, -50%);
 }
 .slides {
+  p { margin: 0; }
   .slidesjs-navigation { display: none; }
+  .slidesjs-pagination {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+  }
 }

@@ -7,7 +7,10 @@ $(document).ready(function () {
  //slides
  $(function() {
   $(".slides").slidesjs({
-    height: 200
+    height: 200,
+    play: {
+      auto: true
+    }
   })
  })
 });
