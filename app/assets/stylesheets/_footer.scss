@@ -6,6 +6,7 @@ footer {
   font-size: 16px;
   overflow: hidden;
   padding: 75px 0;
+  a:hover { color: white; }
   .social-links {
     border-bottom: 1px solid #837F7F;
     font-size: 40px;
@@ -13,6 +14,10 @@ footer {
     li {
       margin-bottom: 0;
       margin-right: 18px;
+      &:hover { 
+        transform: translateY(-5px);
+        transition: all .2s;
+      }
     }
   }
   a { color: $light-gray; }
@@ -33,6 +38,15 @@ footer {
     }
     .contact li { margin-right: 50px; }
     .contact i { margin-right: 10px; }
+    p:last-child { margin-bottom:0; }
+    .copyright {
+      margin-bottom: 0;
+      li:first-child {
+        margin-right: 20px;
+        border-right: 1px solid #837F7F;
+        padding-right: 20px;
+      }
+    }
   }
   .left {
     @include span-columns(3);
