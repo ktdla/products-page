@@ -4,3 +4,4 @@
 //= require_tree .
 //= require header
 //= require filter
+//= require jquery.slides.min.js

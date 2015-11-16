@@ -4,4 +4,8 @@ $(document).ready(function () {
          $(".active-filter").slideToggle();
      });
 
+ //slides
+ $(function() {
+  $(".slides").slidesjs({})
+ })
 });
