@@ -6,6 +6,8 @@ $(document).ready(function () {
 
  //slides
  $(function() {
-  $(".slides").slidesjs({})
+  $(".slides").slidesjs({
+    height: 200
+  })
  })
 });
