@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
-section.container, section.main, section div.container { padding: 75px 0; }
+section.container, section div.container { padding: 75px 0; }
 
 h1, h2, h3 {
   font-family: Lato;
@@ -62,13 +62,16 @@ input, textarea {
 .main {
   position: relative;
   height: 550px;
+  overflow: hidden;
   h1 {
     color: white;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
   }
+  video { width: 100%; }
 }
 .slider p { padding: 0 150px; }
 button {
@@ -88,12 +91,29 @@ button {
 }
 .process {
   article {
+    position: relative;
     @include span-columns(3);
-    &:nth-child(4) { margin-right: 0; }
+    &:nth-child(5) { margin-right: 0; }
+    &:nth-child(5):after { display: none; }
+    &:after {
+      content: ' ';
+      background: url("/assets/arrow.png");
+      background-size: cover;
+      height: 40px;
+      left: 80%;
+      position: absolute;
+      top: 30px;
+      width: 125px;
+    }
     img {
       display: block;
       margin: 0 auto;
       padding-bottom: 10px;
+      &:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transition: .2s all;
+      }
     }
     text-align: center;
     margin-bottom: 50px;
@@ -125,6 +145,7 @@ button {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
         transition: .3s top;
       }
     }
@@ -139,6 +160,7 @@ button {
       left: 50%;
       overflow: hidden;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
       h3 {
         font-family: Dekar;
         font-size: 30px;
@@ -151,13 +173,20 @@ button {
 }
 .team {
   overflow: hidden;
+  .container { overflow: hidden; }
   article {
     @include span-columns(6);
-    margin-bottom: 75px;
     position: relative;
-    div {
-      left: 70px;
-      padding: 0 100px;
+    height: 150px;
+    .horizontal-center {
+      left: 50%;
+      width: 400px;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      position: absolute;
+    }
+    .description {
+      left: 180px;
       position: absolute;
       top: 15px;
       p { margin: 10px 0; }
@@ -320,6 +349,7 @@ button {
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
     }
   }
 }
@@ -373,6 +403,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 .slides {
   p { margin: 0; }
