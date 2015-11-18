@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
-section.container, section.main, section div.container { padding: 75px 0; }
+section.container, section div.container { padding: 75px 0; }
 
 h1, h2, h3 {
   font-family: Lato;
@@ -62,12 +62,16 @@ input, textarea {
 .main {
   position: relative;
   height: 550px;
+  overflow: hidden;
   h1 {
     color: white;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+  video {
+    width: 100%;
   }
 }
 .slider p { padding: 0 150px; }
