@@ -119,6 +119,7 @@ button {
     margin-bottom: 50px;
   }
 }
+
 .categories {
   overflow: hidden;
   h2 { margin-bottom: 0; }
@@ -132,29 +133,6 @@ button {
       width: 480px;
     }
     a { display: block; }
-    .container-overlay {
-      margin: 0 auto;
-      overflow: hidden;
-      position: relative;
-      &:hover .overlay {
-      background-color: $orange;
-      top: 0;
-      transition: .2s top;
-      }
-      &:hover .info {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        transition: .3s top;
-      }
-    }
-    .overlay, .info {
-      display: block;
-      position: absolute;
-      top: 100%;
-    }
-    .overlay { opacity: .6; }
     .info {
       color: white;
       left: 50%;
@@ -354,6 +332,31 @@ button {
   }
 }
 
+//overlay
+.container-overlay {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  &:hover .overlay {
+  background-color: $orange;
+  top: 0;
+  transition: .2s top;
+  }
+  &:hover .info {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transition: .3s top;
+  }
+}
+.overlay, .info {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+.overlay { opacity: .6; }
+
 //categorias
 .products { overflow: hidden; }
 .products article {
@@ -376,6 +379,25 @@ button {
   .tagline {
     color: $orange;
     margin-top: 5px;
+  }
+  .container-overlay, .overlay {
+    height: 250px;
+    width: 220px;
+  }
+  a { display: block; }
+  .info {
+    color: white;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    h3 {
+      font-family: Dekar;
+      font-size: 30px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+    i { font-size: 1.5em; }
   }
 }
 .filter {
