@@ -171,20 +171,22 @@ button {
 }
 .news {
   overflow: hidden;
-  article {
+  a {
     @include span-columns(4);
     border-radius: 20px;
     border: 2px solid $light-gray;
     padding: 35px;
     h4 { margin-top: 0; }
-    .title a {
+    .title {
       color: $orange;
       display: block;
       margin-bottom: 20px;
     }
-    a:hover { color: inherit; }
+    p { margin: 0; }
     &:nth-child(3n + 1) { margin-right: 0; }
   }
+  a:hover { color: inherit; }
+
 }
 .sponsor {
   overflow: hidden;
@@ -392,4 +394,9 @@ button {
       .active { color: $orange; }
     }
   }
+}
+#blog_post img {
+  margin: 0 15%;
+  width: 70%;
+  height: auto;
 }

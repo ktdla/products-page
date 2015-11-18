@@ -142,10 +142,12 @@
   <h2>Noticias</h2>
   <% @posts.each do |post| %>
     <% if post.live? %>
-      <article class="blog_post" id="<%= dom_id(post) %>">
-        <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
-        <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
-      </article>
+      <%= link_to refinery.blog_post_path(post) do %>
+        <article class="blog_post" id="<%= dom_id(post) %>">
+          <h4 class="title"><%= post.title %></h4>
+          <%= post.custom_teaser.html_safe %>
+        </article>
+      <% end %>
     <% end %>
   <% end %>
 </section>
