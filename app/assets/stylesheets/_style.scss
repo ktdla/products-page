@@ -176,11 +176,14 @@ button {
     border-radius: 20px;
     border: 2px solid $light-gray;
     padding: 35px;
-    .title {
+    h4 { margin-top: 0; }
+    .title a {
       color: $orange;
       display: block;
       margin-bottom: 20px;
     }
+    a:hover { color: inherit; }
+    &:nth-child(3n + 1) { margin-right: 0; }
   }
 }
 .sponsor {

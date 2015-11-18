@@ -140,23 +140,11 @@
 </section>
 <section class="container news">
   <h2>Noticias</h2>
-  <article>
-    <span class="title">Titulo del evento 1</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
-  <article>
-    <span class="title">Se busca diseñador</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
-  <article>
-    <span class="title">Lanzamiento de ...</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
   <% @posts.each do |post| %>
     <% if post.live? %>
       <article class="blog_post" id="<%= dom_id(post) %>">
-          <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
-            <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
+        <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
+        <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
       </article>
     <% end %>
   <% end %>
