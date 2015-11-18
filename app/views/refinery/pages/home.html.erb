@@ -152,6 +152,14 @@
     <span class="title">Lanzamiento de ...</span>
     <span>Lorem ipsum dolor sit amet.</span>
   </article>
+  <% @posts.each do |post| %>
+    <% if post.live? %>
+      <article class="blog_post" id="<%= dom_id(post) %>">
+          <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
+            <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
+      </article>
+    <% end %>
+  <% end %>
 </section>
 <section class="background-image">
   <div class="container sponsor">

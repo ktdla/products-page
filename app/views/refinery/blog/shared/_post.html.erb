@@ -1,14 +1,10 @@
-<section class="container news">
 <% if post.live? %>
   <article class="blog_post" id="<%= dom_id(post) %>">
-      <span class="title"><%= link_to post.title, refinery.blog_post_path(post) %></span>
-      <span>
-        <% if blog_post_teaser_enabled? %>
-          <%= blog_post_teaser(post) %>
-        <% else %>
-          <%= post.body.html_safe %>
-        <% end %>
-      </span>
+      <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
+      <% if blog_post_teaser_enabled? %>
+        <%= blog_post_teaser(post) %>
+      <% else %>
+        <%= post.body.html_safe %>
+      <% end %>
   </article>
 <% end %>
-</section>
