@@ -142,7 +142,7 @@
   <h2>Noticias</h2>
   <% @posts.each do |post| %>
     <% if post.live? %>
-      <%= link_to refinery.blog_post_path(post) do %>
+      <%= link_to refinery.blog_post_path(post), :class => "post" do %>
         <article class="blog_post" id="<%= dom_id(post) %>">
           <h4 class="title"><%= post.title %></h4>
           <%= post.custom_teaser.html_safe %>

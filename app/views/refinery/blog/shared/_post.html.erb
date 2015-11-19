@@ -1,10 +1,8 @@
 <% if post.live? %>
-  <article class="blog_post" id="<%= dom_id(post) %>">
-      <h4 class="title"><%= link_to post.title, refinery.blog_post_path(post) %></h4>
-      <% if blog_post_teaser_enabled? %>
-        <%= blog_post_teaser(post) %>
-      <% else %>
-        <%= post.body.html_safe %>
-      <% end %>
-  </article>
+  <%= link_to refinery.blog_post_path(post), :class => "posts" do %>
+    <article class="blog_post" id="<%= dom_id(post) %>">
+      <h4 class="title"><%= post.title %></h4>
+      <%= post.custom_teaser.html_safe %>
+    </article>
+  <% end %>
 <% end %>

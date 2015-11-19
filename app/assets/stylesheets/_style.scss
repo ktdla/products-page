@@ -171,7 +171,7 @@ button {
 }
 .news {
   overflow: hidden;
-  a {
+  .post, .posts {
     @include span-columns(4);
     border-radius: 20px;
     border: 2px solid $light-gray;
@@ -183,9 +183,13 @@ button {
       margin-bottom: 20px;
     }
     p { margin: 0; }
-    &:nth-child(3n + 1) { margin-right: 0; }
   }
+  .post:nth-child(3n + 1) { margin-right: 0; }
   a:hover { color: inherit; }
+  .posts {
+    margin-bottom: 20px;
+    &:nth-child(3n) { margin-right: 0; }
+  }
 
 }
 .sponsor {

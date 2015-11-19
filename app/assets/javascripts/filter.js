@@ -11,6 +11,13 @@ $(document).ready(function () {
     play: {
       auto: true
     }
-  })
- })
+  });
+ });
+
+ //filter posts in home
+  var elements = $('.news .post');
+  $('.news .post').detach();
+  elements.appendTo(".news");
+  $('.news .post').hide();
+  $('.news .post').slice(0,3).show();
 });
