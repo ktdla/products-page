@@ -20,4 +20,15 @@ $(document).ready(function () {
   elements.appendTo(".news");
   $('.news .post').hide();
   $('.news .post').slice(0,3).show();
+
+ //popup
+ $('.popup-vimeo').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
 });
