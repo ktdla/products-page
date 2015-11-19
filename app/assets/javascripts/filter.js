@@ -15,6 +15,12 @@ $(document).ready(function () {
   });
 
   //filter categories from home
+  $('#navigation-menu li').click(function(){
+    var name = $(this).text().toLowerCase();
+    $(".products article").hide();
+    $("."+name).show();
+    window.history.replaceState(url, "categorias", "categorias");
+  });
   var url = window.location.href
   var arr = url.split("#");
   var category = arr[1].toLowerCase();
