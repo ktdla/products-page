@@ -233,7 +233,10 @@ button {
     margin-bottom: 32px;
     width: 500px;
   }
-  button { width: 300px; }
+  input[type="submit"] { 
+    width: 300px; 
+    @extend button;
+  }
 }
 .register {
   text-align: center;
@@ -247,7 +250,8 @@ button {
     width: 300px;
     &.email { width: 400px; }
   }
-  button {
+  input[type="submit"] {
+    @extend button;
     display: inline-block;
     width: 300px;
   }

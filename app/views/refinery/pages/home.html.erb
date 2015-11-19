@@ -174,12 +174,16 @@
 <section class="container subscription">
   <h2>Regístrate para recibir...</h2>
   <article class="contact">
+    <%= form_tag '/suscribir', target: "_top" do %>
     <div class="left">
-      <input type="text" placeholder="Nombre">
-      <input type="text" placeholder="Email">
-      <input type="text" placeholder="Ciudad">
+      <%= hidden_field_tag :group_name, 'suscriptores' %>
+      <%= hidden_field_tag :group, 'home' %>
+      <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+      <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= text_field_tag :city, nil, type: "text", placeholder: "Ciudad" %>
     </div>
-    <textarea placeholder="Mensaje"></textarea>
-    <button>Enviar</button>
+    <%= text_area_tag :comment, nil, type: "text", placeholder: "Mensaje", maxlength: 255 %>
+    <%= submit_tag "Enviar" %>
+    <% end %>
   </article>
 </section>
