@@ -13,10 +13,10 @@
     <nav>
       <ul id="navigation-menu">
         <% if locale.to_s == "es" %>
-          <%= link_to_in_li "iLamps", '/categorias' %>
-          <%= link_to_in_li "iKids", '/categorias' %>
-          <%= link_to_in_li "iCoworking", '/categorias' %>
-          <%= link_to_in_li "iChristmas", '/categorias' %>
+          <%= link_to_in_li "iLamps", '/categorias#iLamps' %>
+          <%= link_to_in_li "iKids", '/categorias#iKids' %>
+          <%= link_to_in_li "iCoworking", '/categorias#iCoworking' %>
+          <%= link_to_in_li "iChristmas", '/categorias#iChristmas' %>
            <li><button class="suscribe">Suscríbete</button></li>
         <% else locale.to_s == "en" %>
           <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
