@@ -14,25 +14,25 @@ $(document).ready(function () {
   });
   });
 
+//filter posts in home
+  var elements = $('.news .post');
+  $('.news .post').detach();
+  elements.appendTo(".news");
+  $('.news .post').hide();
+  $('.news .post').slice(0,3).show();
+
   //filter categories from home
   $('#navigation-menu li').click(function(){
     var name = $(this).text().toLowerCase();
     $(".products article").hide();
     $("."+name).show();
-    window.history.replaceState(url, "categorias", "categorias");
+    window.history.replaceState(category, name, name);
   });
   var url = window.location.href
   var arr = url.split("#");
   var category = arr[1].toLowerCase();
   $(".products article").hide();
   $("."+category).show();
-
-  //filter posts in home
-  var elements = $('.news .post');
-  $('.news .post').detach();
-  elements.appendTo(".news");
-  $('.news .post').hide();
-  $('.news .post').slice(0,3).show();
 
   //popup
   $('.popup-vimeo').magnificPopup({
