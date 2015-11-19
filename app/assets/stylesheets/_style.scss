@@ -178,17 +178,26 @@ button {
 }
 .news {
   overflow: hidden;
-  article {
+  .post, .posts {
     @include span-columns(4);
     border-radius: 20px;
     border: 2px solid $light-gray;
     padding: 35px;
+    h4 { margin-top: 0; }
     .title {
       color: $orange;
       display: block;
       margin-bottom: 20px;
     }
+    p { margin: 0; }
   }
+  .post:nth-child(3n + 1) { margin-right: 0; }
+  a:hover { color: inherit; }
+  .posts {
+    margin-bottom: 20px;
+    &:nth-child(3n) { margin-right: 0; }
+  }
+
 }
 .sponsor {
   overflow: hidden;
@@ -441,5 +450,26 @@ button {
       a i { font-size: 12px; }
       .active { color: $orange; }
     }
+  }
+}
+#blog_post {
+  p {
+    width: 70%;
+    margin: 10px auto;
+    line-height: 26px;
+  }
+  img {
+    margin: 0 15%;
+    width: 70%;
+    height: auto;
+  }
+}
+.new_comment {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  .field {
+    margin-bottom: 20px;
+    input, textarea { width: 50%; }
   }
 }

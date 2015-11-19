@@ -127,18 +127,16 @@
 </section>
 <section class="container news">
   <h2>Noticias</h2>
-  <article>
-    <span class="title">Titulo del evento 1</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
-  <article>
-    <span class="title">Se busca diseñador</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
-  <article>
-    <span class="title">Lanzamiento de ...</span>
-    <span>Lorem ipsum dolor sit amet.</span>
-  </article>
+  <% @posts.each do |post| %>
+    <% if post.live? %>
+      <%= link_to refinery.blog_post_path(post), :class => "post" do %>
+        <article class="blog_post" id="<%= dom_id(post) %>">
+          <h4 class="title"><%= post.title %></h4>
+          <%= post.custom_teaser.html_safe %>
+        </article>
+      <% end %>
+    <% end %>
+  <% end %>
 </section>
 <section class="background-image">
   <div class="container sponsor">
