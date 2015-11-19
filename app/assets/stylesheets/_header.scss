@@ -122,7 +122,20 @@ header {
   right: 0;
   top: 47px;
   z-index: 2;
-  input, button {
+  input[type="submit"] {
+    background-color: $orange;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: Lato;
+    font-size: 16px;
+    margin-top: 10px;
+    outline: 0;
+    padding: 5px 15px;
+  }
+  input, input[type="submit"] {
     height: 35px;
     width: 250px;
   }
@@ -130,9 +143,5 @@ header {
     font-size: 18px;
     outline: 0;
     padding: 10px;
-  }
-  button {
-    font-size: 16px;
-    margin-top: 10px;
   }
 }

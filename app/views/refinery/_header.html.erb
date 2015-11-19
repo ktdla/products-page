@@ -6,7 +6,7 @@
     <ul class="language" id='locale'>
       <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
           <li>
-            <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+            <%= link_to Refinery::I18n.locales[frontend_locale], url_for(:locale => frontend_locale) %>
           </li>
       <% end %>
     </ul>
@@ -31,8 +31,12 @@
           <div class="caret-outer"></div>
           <div class="caret-inner"></div>
         </div>
-        <input type="text" placeholder="Email">
-        <button>Suscríbete a nuestras noticias</button>
+        <%= form_tag '/suscribir', target: "_top" do %>
+          <%= hidden_field_tag :group_name, 'suscriptores' %>
+          <%= hidden_field_tag :group, 'newsletter' %>
+          <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9n._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+          <%= submit_tag "Suscríbete a nuestras noticias" %>
+        <% end %>
       </div>
     </nav>
   </div>
