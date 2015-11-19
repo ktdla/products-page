@@ -399,8 +399,24 @@ button {
     }
   }
 }
-#blog_post img {
-  margin: 0 15%;
-  width: 70%;
-  height: auto;
+#blog_post {
+  p {
+    width: 70%;
+    margin: 10px auto;
+    line-height: 26px;
+  }
+  img {
+    margin: 0 15%;
+    width: 70%;
+    height: auto;
+  }
+}
+.new_comment {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  .field {
+    margin-bottom: 20px;
+    input, textarea { width: 50%; }
+  }
 }
