@@ -6,7 +6,7 @@
     <ul class="language" id='locale'>
       <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
           <li>
-            <%= link_to Refinery::I18n.locales[frontend_locale], url_for(:locale => frontend_locale) %>
+            <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
           </li>
       <% end %>
     </ul>
