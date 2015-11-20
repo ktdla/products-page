@@ -477,3 +477,23 @@ button {
     input, textarea { width: 50%; }
   }
 }
+
+//gracias
+.thanks-subscribe {
+  text-align: center;
+  p { 
+    padding: 0 100px; 
+    margin-top: 50px;
+  }
+  button { 
+    width: 500px;
+    margin-top: 50px;
+    font-weight: 300;
+  }
+  span { 
+    font-size: 40px;
+    font-family: Lato;
+    font-weight: 300; 
+    display: block;
+  }
+}
