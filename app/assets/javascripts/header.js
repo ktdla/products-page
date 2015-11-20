@@ -12,5 +12,13 @@ $(".suscribe").click(function(){
   $(".header-register").slideToggle(0);
 });
 
+//button responsive
+$('.button-responsive').click(function(){
+  $("#navigation-menu").toggle();
+});
 
+//Fix button responsive
+if ($(window).width() < 769){
+  $("header .sticky").addClass("fixed");
+}
 });
