@@ -7,7 +7,41 @@
 }
 
 @media screen and (max-width: 768px) {
+  header {
 
+  }
+  .products {
+    div article {
+      width: 30%;
+      margin-right: 5%;
+      &:nth-child(2n+4) { margin-right: 5%; }
+      &:nth-child(3n+3) { margin-right: 0; }
+    }
+  }
+  section div.container { padding: 75px 20px; }
+  footer {
+    padding: 30px 20px;
+    .center {
+      ul { margin-bottom: 25px; }
+      .contact {
+        padding-left: 0;
+        li {
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+      .social-links {
+        padding-bottom: 20px;
+        li {
+          margin-right: 50px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .copyright {
+      padding: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
