@@ -190,6 +190,7 @@ button {
       margin-bottom: 20px;
     }
     p { margin: 0; }
+    &:hover { box-shadow: 0 5px 5px 0 $light-gray; }
   }
   .post:nth-child(3n + 1) { margin-right: 0; }
   a:hover { color: inherit; }
@@ -463,9 +464,10 @@ button {
     line-height: 26px;
   }
   img {
-    margin: 0 15%;
-    width: 70%;
-    height: auto;
+    display: block;
+    margin: 50px auto;
+    max-width: 800px;
+    object-fit: cover;
   }
 }
 .new_comment {
@@ -495,5 +497,54 @@ button {
     font-family: Lato;
     font-weight: 300; 
     display: block;
+  }
+}
+
+.line { 
+  border-bottom: 2px solid $light-gray;
+  margin-bottom: 75px; 
+}
+.blog_comment_message {
+  border-radius: 5px;
+  border: 1px solid $light-gray;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 25px;
+  position: relative;
+  width: 70%;
+  p {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 0 0 10px;
+    vertical-align: top;
+  }
+  img { border-radius: 50%; }
+  &:last-child { padding-bottom: 25px; }
+}
+.blog_comment_author {
+  color: #AFAAAA;
+  font-size: 16px;
+  p { 
+    line-height: 20px;
+    margin: 0; 
+  }
+}
+#comments {
+  h2 { margin: 50px; }
+  input, textarea {
+    font-size: 18px;
+    height: 60px;
+    margin-right: 30px;
+    padding: 20px;
+    width: 500px;
+    &.email { width: 400px; }
+  }
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+  input[type="submit"] {
+    @extend button;
+    margin-bottom: 75px;
   }
 }
