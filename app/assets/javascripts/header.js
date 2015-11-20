@@ -14,11 +14,8 @@ $(".suscribe").click(function(){
 
 //button responsive
 $('.button-responsive').click(function(){
+  $("header .sticky").addClass("fixed");
   $("#navigation-menu").toggle();
 });
 
-//Fix button responsive
-if ($(window).width() < 769){
-  $("header .sticky").addClass("fixed");
-}
 });

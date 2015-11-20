@@ -27,6 +27,7 @@
       }
     }
   }
+  .main { height: auto; }
   .products {
     div article {
       width: 30%;
@@ -36,6 +37,12 @@
     }
   }
   section div.container { padding: 75px 20px; }
+  .categories article {
+    width: 47%;
+    margin-right: 6%;
+    .container-overlay, a, .overlay, img { width: 100%; }
+  }
+  .team article .horizontal-center { width: 100%; }
   footer {
     padding: 30px 20px;
     .center {
