@@ -5,7 +5,13 @@ module MailchimpWrapper
     mailchimp.lists.subscribe(
       ENV['MAILCHIMP_LIST_ID'],
       { email: user[:email] },
-      merge_vars)
+      merge_vars, 
+      'html', 
+      true, 
+      true, 
+      false, 
+      false
+      )
   end
 
   def self.merge_vars_hash(user, group_name, group)

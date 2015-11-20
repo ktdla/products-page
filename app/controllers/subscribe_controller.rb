@@ -1,10 +1,9 @@
 class SubscribeController < ApplicationController
-  include Refinery::I18n
   def create
     logger.info "suscripcion #{params.inspect}"
     user = user_params(params)
     MailchimpWrapper.subscribe(user, params[:group_name], params[:group])
-    render 'refinery/pages/gracias'
+    redirect_to '/gracias'
   rescue Mailchimp::Error => e
     logger.error "ERROR mailchimp #{e.message} #{params.inspect}"
   end
