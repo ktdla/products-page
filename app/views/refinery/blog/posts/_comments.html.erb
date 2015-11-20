@@ -1,4 +1,4 @@
-<aside id="comments">
+<aside id="comments" class="container">
   <% if (comments = @post.comments.approved).any? %>
     <h2><%= t('title', :scope => 'refinery.blog.posts.show.comments') %></h2>
     <%= render :partial => "comment", :collection => comments %>
@@ -18,16 +18,13 @@
                  :object => f.object,
                  :include_object_name => true %>
       <div class='field'>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, :placeholder => "Nombre" %>
       </div>
       <div class='field'>
-        <%= f.label :email %>
-        <%= f.email_field :email %>
+        <%= f.email_field :email, :placeholder => "Email" %>
       </div>
       <div class='field message_field'>
-        <%= f.label :message %>
-        <%= f.text_area :message, :rows => 6 %>
+        <%= f.text_area :message, :rows => 6, :placeholder => "Mensaje" %>
       </div>
       <div class='field form-actions'>
         <%= f.submit t('submit', :scope => 'refinery.blog.posts.show') %>
