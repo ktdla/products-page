@@ -5,6 +5,16 @@
   }
   section.container { padding: 75px 20px; }
   .subscription .left input { width: 100%; }
+  .categories article, .products article {
+    .container-overlay, a, .overlay, img { width: 100%; }
+  }
+  .register {
+    form {
+      overflow: hidden;
+      input { @include span-columns(4); }
+      input[type="submit"] { width: 31.76157%; }
+    }
+  }
   footer {
     .center .contact li { margin-right: 20px;}
   }
@@ -12,6 +22,7 @@
 
 @media screen and (max-width: 768px) {
   header {
+    .container { overflow: hidden; }
     .button-responsive {
       display: block;
       height: 40px;
@@ -27,8 +38,13 @@
       }
     }
   }
-  .main { height: auto; }
+  section.container { padding: 30px 20px; }
   .products {
+    .filter ul {
+      margin: 19px auto 0;
+      width: 90%;
+      li { margin-right: 0; }
+    }
     div article {
       width: 30%;
       margin-right: 5%;
@@ -40,9 +56,25 @@
   .categories article {
     width: 47%;
     margin-right: 6%;
-    .container-overlay, a, .overlay, img { width: 100%; }
   }
   .team article .horizontal-center { width: 100%; }
+  .process .container article {
+    width: 49%;
+    margin-right: 2%;
+    &:nth-child(2n+1) { margin-right: 0; }
+    &:nth-child(2n+1):after { display: none; }
+  }
+  .register form {
+    input {
+      width: 48%;
+      margin-right: 4%;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+    input[type="submit"] {
+      width: 48%;
+      margin: 0 26%;
+    }
+  }
   footer {
     padding: 30px 20px;
     .left img { width: 100%; }
@@ -86,10 +118,31 @@
     width: 50%;
     margin-top: -45px;
   }
+  .category { width: 90%; }
+  .category>img { width: 100%; }
   .team article, .news .post {
     width: 100%;
     margin-bottom: 20px;
     &:last-child { margin-bottom: 0; }
+  }
+  .products div article {
+    width: 100%;
+    margin-right: 0;
+    &:nth-child(2n+4) { margin-right: 0; }
+    &:nth-child(3n+3) { margin-right: 0 }
+  }
+  .process article:after {
+    height: 22%;
+    width: 44%;
+  }
+  .process button { width: 90%;}
+  .register form {
+    input, input[type="submit"] {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      &:nth-child(2n) { margin-right: 0; }
+    }
   }
   footer {
     .left {
@@ -99,6 +152,10 @@
     .center {
       width: 100%;
       margin-right: 0;
+      .contact li{
+        display: none;
+        &:last-child { display: block; }
+      }
     }
     .right { display: none; }
   }
