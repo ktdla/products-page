@@ -8,6 +8,13 @@
   .categories article, .products article {
     .container-overlay, a, .overlay, img { width: 100%; }
   }
+  .register {
+    form {
+      overflow: hidden;
+      input { @include span-columns(4); }
+      input[type="submit"] { width: 31.76157%; }
+    }
+  }
   footer {
     .center .contact li { margin-right: 20px;}
   }
@@ -31,6 +38,7 @@
     }
   }
   .main { height: auto; }
+  section.container { padding: 30px 20px; }
   .products {
     div article {
       width: 30%;
@@ -45,6 +53,17 @@
     margin-right: 6%;
   }
   .team article .horizontal-center { width: 100%; }
+  .register form {
+    input {
+      width: 48%;
+      margin-right: 4%;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+    input[type="submit"] {
+      width: 48%;
+      margin: 0 26%;
+    }
+  }
   footer {
     padding: 30px 20px;
     .left img { width: 100%; }
@@ -99,6 +118,14 @@
     &:nth-child(2n+4) { margin-right: 2%; }
     &:nth-child(3n+3) { margin-right: 2% }
     &:nth-child(2n) { margin-right: 0; }
+  }
+  .register form {
+    input, input[type="submit"] {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      &:nth-child(2n) { margin-right: 0; }
+    }
   }
   footer {
     .left {
