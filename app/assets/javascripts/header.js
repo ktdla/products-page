@@ -12,5 +12,10 @@ $(".suscribe").click(function(){
   $(".header-register").slideToggle(0);
 });
 
+//button responsive
+$('.button-responsive').click(function(){
+  $("header .sticky").addClass("fixed");
+  $("#navigation-menu").toggle();
+});
 
 });
