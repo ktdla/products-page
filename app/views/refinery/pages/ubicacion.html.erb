@@ -1,0 +1,44 @@
+<section class="background-image">
+  <div class="container">
+    <h1>Frase de fuerza aquí</h1>
+  </div>
+</section>
+<section class="map container">
+  <h2>Ubícanos</h2>
+  <div class="left">
+    <article class="address">
+      <span>Dirección 1</span>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
+        <li><i class="fa fa-phone"></i> (01)-2222222</li>
+      </ul>
+    </article>
+    <article class="address">
+      <span>Dirección 2</span>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
+        <li><i class="fa fa-phone"></i> (01)-2222222</li>
+      </ul>
+    </article>
+    <article class="address">
+      <span>Dirección 3</span>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
+        <li><i class="fa fa-phone"></i> (01)-2222222</li>
+      </ul>
+    </article>
+  </div>
+  <div class="right" id="overlay"><iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3311.4313418937313!2d-75.75184435164877!3d-14.046904027645624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spe!4v1448313155975" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+</section>
+<section class="register">
+  <div class="container">
+    <h2>Regístrate para recibir</h2>
+    <%= form_tag '/suscribir', target: "_top" do %>
+      <%= hidden_field_tag :group_name, 'suscriptores' %>
+      <%= hidden_field_tag :group, 'ilamps' %>
+      <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+      <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+    <%= submit_tag "Enviar" %>
+    <% end %>
+  </div>
+</section>
