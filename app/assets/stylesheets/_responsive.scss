@@ -45,6 +45,7 @@
   .team article .horizontal-center { width: 100%; }
   footer {
     padding: 30px 20px;
+    .left img { width: 100%; }
     .center {
       ul { margin-bottom: 25px; }
       .contact {
@@ -55,15 +56,27 @@
         }
       }
       .social-links {
-        padding-bottom: 20px;
+        overflow: hidden;
+        padding: 0 0 20px;
         li {
-          margin-right: 50px;
+          margin-right: 3%;
           margin-bottom: 20px;
+          width: 26%;
+          &:nth-child(3n) { margin-right: 0; }
         }
       }
+      .copyright {
+        padding: 0;
+        li:first-child {
+          width: 100%;
+          border-right: none;
+        }
+      }
+      p { margin-top: 0; }
     }
-    .copyright {
-      padding: 0;
+    .right ul {
+      padding-left: 0;
+      float: right;
     }
   }
 }
@@ -77,5 +90,16 @@
     width: 100%;
     margin-bottom: 20px;
     &:last-child { margin-bottom: 0; }
+  }
+  footer {
+    .left {
+      width: 25%;
+      margin: 0 37.5% 20px;
+    }
+    .center {
+      width: 100%;
+      margin-right: 0;
+    }
+    .right { display: none; }
   }
 }
