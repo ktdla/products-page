@@ -552,3 +552,30 @@ button {
     margin-bottom: 75px;
   }
 }
+.map {
+  overflow: hidden;
+  .left { @include span-columns(4) }
+  .address {
+    border-radius: 10px;
+    border: 2px solid $light-gray;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 15px;
+    &:hover { box-shadow: 0 5px 5px 0 $light-gray; }
+    ul { 
+      font-size: 16px; 
+      margin: 10px 0 0;
+      padding-left: 0;
+    }
+    span, i { color: $orange; }
+    i { margin-right: 10px; }
+  }
+  .right {
+    @include span-columns(8);
+    iframe { 
+      height: 420px;
+      width: 100%;
+    }
+  }
+}
+.scrolloff { pointer-events: none; }
