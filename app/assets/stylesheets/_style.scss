@@ -234,8 +234,8 @@ button {
     margin-bottom: 32px;
     width: 500px;
   }
-  input[type="submit"] { 
-    width: 300px; 
+  input[type="submit"] {
+    width: 300px;
     @extend button;
   }
 }
@@ -419,6 +419,10 @@ button {
   font-size: 18px;
   text-align: center;
   cursor: pointer;
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
   li {
     display: inline-block;
     margin-right: 100px;
@@ -483,26 +487,26 @@ button {
 //gracias
 .thanks-subscribe {
   text-align: center;
-  p { 
-    padding: 0 100px; 
+  p {
+    padding: 0 100px;
     margin-top: 50px;
   }
-  button { 
+  button {
     width: 500px;
     margin-top: 50px;
     font-weight: 300;
   }
-  span { 
+  span {
     font-size: 40px;
     font-family: Lato;
-    font-weight: 300; 
+    font-weight: 300;
     display: block;
   }
 }
 
-.line { 
+.line {
   border-bottom: 2px solid $light-gray;
-  margin-bottom: 75px; 
+  margin-bottom: 75px;
 }
 .blog_comment_message {
   border-radius: 5px;
@@ -524,9 +528,9 @@ button {
 .blog_comment_author {
   color: #AFAAAA;
   font-size: 16px;
-  p { 
+  p {
     line-height: 20px;
-    margin: 0; 
+    margin: 0;
   }
 }
 #comments {
