@@ -53,6 +53,12 @@
     margin-right: 6%;
   }
   .team article .horizontal-center { width: 100%; }
+  .process .container article {
+    width: 49%;
+    margin-right: 2%;
+    &:nth-child(2n+1) { margin-right: 0; }
+    &:nth-child(2n+1):after { display: none; }
+  }
   .register form {
     input {
       width: 48%;
