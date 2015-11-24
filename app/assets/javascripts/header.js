@@ -14,9 +14,6 @@ $(".suscribe").click(function(){
 
 //button responsive
 $('.button-responsive').click(function(){
-  $("header .sticky").toggleClass("fixed");
-  $("header .sticky .language").toggle();
   $("#navigation-menu").toggle();
 });
-
 });
