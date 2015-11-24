@@ -394,6 +394,7 @@ button {
     color: $orange;
     margin-top: 5px;
   }
+  #material, #tipo { display: none; }
   .container-overlay, .overlay {
     height: 250px;
     width: 220px;
@@ -562,8 +563,8 @@ button {
     margin-bottom: 15px;
     padding: 15px;
     &:hover { box-shadow: 0 5px 5px 0 $light-gray; }
-    ul { 
-      font-size: 16px; 
+    ul {
+      font-size: 16px;
       margin: 10px 0 0;
       padding-left: 0;
     }
@@ -572,7 +573,7 @@ button {
   }
   .right {
     @include span-columns(8);
-    iframe { 
+    iframe {
       height: 420px;
       width: 100%;
     }
