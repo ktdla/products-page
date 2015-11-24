@@ -15,6 +15,17 @@
       input[type="submit"] { width: 31.76157%; }
     }
   }
+  .product-description {
+    .left {
+      margin-right: 2%;
+      width: 49%;
+    }
+    .right {
+      width: 49%;
+      img { width: 100%; }
+    }
+  }
+  .maps article img { width: 100%; }
   footer {
     .center .contact li { margin-right: 20px;}
   }
