@@ -191,10 +191,7 @@
   }
   .team article .description p { display: none; }
   .social-profiles { margin-top: 20px; }
-  .process article:after {
-    height: 22%;
-    width: 44%;
-  }
+  .process article:after { display: none; }
   .process button { width: 90%;}
   .register form {
     input, input[type="submit"] {
