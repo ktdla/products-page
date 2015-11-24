@@ -86,6 +86,15 @@
       margin: 0 26%;
     }
   }
+  .product-description {
+    .left, .right { width: 100%; }
+    .left .status, .right { margin-top: 30px; }
+    .more-images img {
+      margin: 0 2% 15px 0;
+      width: 49%;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+  }
   footer {
     padding: 30px 20px;
     .left img { width: 100%; }
@@ -154,6 +163,13 @@
       margin-right: 0;
       &:nth-child(2n) { margin-right: 0; }
     }
+  }
+  .product-description {
+    .left .status article {
+      width: 100%;
+      &:last-child { margin-top: 20px; }
+    }
+    .more-images img { height: 120px; }
   }
   footer {
     .left {
