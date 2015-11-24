@@ -1,6 +1,7 @@
 @media screen and (max-width: 1240px) {
   header .container { padding: 0 20px; }
   section.container { padding: 75px 20px; }
+  section div.container { padding: 75px 20px; }
 }
 @media screen and (max-width: 1024px) {
   header #navigation-menu li { margin-right: 20px; }
@@ -50,6 +51,7 @@
       }
     }
   }
+  .main video { height: 100%; }
   section.container { padding: 30px 20px; }
   .products {
     .filter ul {
@@ -64,17 +66,33 @@
       &:nth-child(3n+3) { margin-right: 0; }
     }
   }
-  section div.container { padding: 75px 20px; }
+  .slides {
+    .slidesjs-container { height: 100px !important; }
+    p { padding: 0 20px; }
+  }
   .categories article {
     width: 47%;
     margin-right: 6%;
   }
   .team article .horizontal-center { width: 100%; }
+  .team article, .news .post {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+    &:last-child { margin-bottom: 0; }
+  }
+  .news .post:nth-child(4) { margin-bottom: 20px; }
   .process .container article {
     width: 49%;
     margin-right: 2%;
     &:nth-child(2n+1) { margin-right: 0; }
     &:nth-child(2n+1):after { display: none; }
+  }
+  .sponsor article {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(2n+3) { margin-right: 2%; }
+    &:nth-child(3n+1) { margin-right: 0; }
   }
   .register form {
     input {
@@ -139,12 +157,12 @@
     width: 50%;
     margin-top: -45px;
   }
+  section div.container { padding: 75px 10px; }
+  .slides p { padding: 0; }
   .category { width: 90%; }
   .category>img { width: 100%; }
-  .team article, .news .post {
+  .categories article {
     width: 100%;
-    margin-bottom: 20px;
-    &:last-child { margin-bottom: 0; }
   }
   .products div article {
     width: 100%;
@@ -152,6 +170,8 @@
     &:nth-child(2n+4) { margin-right: 0; }
     &:nth-child(3n+3) { margin-right: 0 }
   }
+  .team article .description p { display: none; }
+  .social-profiles { margin-top: 20px; }
   .process article:after {
     height: 22%;
     width: 44%;
@@ -171,6 +191,12 @@
       &:last-child { margin-top: 20px; }
     }
     .more-images img { height: 120px; }
+  }
+  .subscription {
+    .left, textarea {
+      margin-right: 0;
+      width: 100%;
+    }
   }
   footer {
     .left {
