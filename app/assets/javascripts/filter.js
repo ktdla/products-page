@@ -21,6 +21,18 @@ $(document).ready(function () {
   $('.news .post').hide();
   $('.news .post').slice(0,3).show();
 
+//filter categories products
+  $(".active-filter li").click(function(){
+    $(".active-filter li").removeClass("active");
+    $(this).addClass("active");
+    var categoryProduct = $(this).text().toLowerCase();
+    $(".products article .tagline").hide();
+    $(".products article #"+categoryProduct).show();
+    //Sort elements
+    //var list = $(".products article span").text();
+    //var elements = $("#"+categoryProduct)
+
+  });
   //filter categories from home
   // $('#navigation-menu li').click(function(){
   //   var name = $(this).text().toLowerCase();
@@ -46,9 +58,9 @@ $(document).ready(function () {
   });
 
 //map
-  $('#map').addClass('scrolloff');                
+  $('#map').addClass('scrolloff');
     $('#overlay').on("mouseup",function(){
-      $('#map').addClass('scrolloff'); 
+      $('#map').addClass('scrolloff');
     });
     $('#overlay').on("mousedown",function(){
       $('#map').removeClass('scrolloff');
