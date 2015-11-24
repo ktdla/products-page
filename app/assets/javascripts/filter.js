@@ -28,6 +28,10 @@ $(document).ready(function () {
     var categoryProduct = $(this).text().toLowerCase();
     $(".products article .tagline").hide();
     $(".products article #"+categoryProduct).show();
+    //Sort elements
+    //var list = $(".products article span").text();
+    //var elements = $("#"+categoryProduct)
+
   });
   //filter categories from home
   // $('#navigation-menu li').click(function(){
