@@ -9,6 +9,7 @@
   .categories article, .products article {
     .container-overlay, a, .overlay, img { width: 100%; }
   }
+  .main-video { height: auto; }
   .register {
     form {
       overflow: hidden;
@@ -36,22 +37,32 @@
   h2, h3 { margin-bottom: 20px; }
   header {
     .container { overflow: hidden; }
+    .language { padding-left: 0; }
     .button-responsive {
       display: block;
       height: 40px;
       width: 50px;
       float: right;
+      border: none;
+      background: #ffffff;
+      color: $orange;
+      padding: 0;
+      font-size: xx-large;
     }
     #navigation-menu {
       display: none;
+      width: 108px;
+      padding-left: 0;
       li {
         width: 100%;
         text-align: right;
+        padding-right: 10px;
+        line-height: 25px;
         &:last-child { display: none; }
       }
     }
   }
-  .main video { height: 100%; }
+  .main-video video { height: 100%; }
   section.container { padding: 30px 20px; }
   .products {
     .filter ul {
@@ -153,11 +164,19 @@
 }
 
 @media screen and (max-width: 480px) {
-  header nav {
-    width: 50%;
-    margin-top: -45px;
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
   }
-  section div.container { padding: 75px 10px; }
+  h2 { font-size: 28px; }
+  header {
+    .logo {
+      width: 45%;
+      object-fit: initial;
+    }
+    .right { width: 55%; }
+  }
+  section div.container { padding: 30px 10px; }
   .slides p { padding: 0; }
   .category { width: 90%; }
   .category>img { width: 100%; }
@@ -172,10 +191,7 @@
   }
   .team article .description p { display: none; }
   .social-profiles { margin-top: 20px; }
-  .process article:after {
-    height: 22%;
-    width: 44%;
-  }
+  .process article:after { display: none; }
   .process button { width: 90%;}
   .register form {
     input, input[type="submit"] {

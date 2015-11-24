@@ -3,42 +3,44 @@
     <%= link_to refinery.root_path do %>
       <%= image_tag "ifurniture-logo.png", :class => "logo" %>
     <% end %>
-    <ul class="language" id='locale'>
-      <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
-          <li>
-            <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
-          </li>
-      <% end %>
-    </ul>
-    <nav>
-      <button class="button-responsive"><i class="fa fa-bars"></i></button>
-      <ul id="navigation-menu">
-        <% if locale.to_s == "es" %>
-          <%= link_to_in_li "iLamps", '/categorias' %>
-          <%= link_to_in_li "iKids", '/categorias' %>
-          <%= link_to_in_li "iCoworking", '/categorias' %>
-          <%= link_to_in_li "iChristmas", '/categorias' %>
-           <li><button class="suscribe">Suscríbete</button></li>
-        <% else locale.to_s == "en" %>
-          <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
-          <%= link_to_in_li "iKids", '/categorias' + locale.to_s  %>
-          <%= link_to_in_li "iCoworking", '/categorias' + locale.to_s  %>
-          <%= link_to_in_li "iChristmas", '/categorias' + locale.to_s  %>
-          <li><button class="suscribe">Subscribe</button></li>
+    <div class="right">
+      <ul class="language" id='locale'>
+        <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+            <li>
+              <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+            </li>
         <% end %>
       </ul>
-      <div class="header-register">
-        <div class="dropdown-caret">
-          <div class="caret-outer"></div>
-          <div class="caret-inner"></div>
+      <nav>
+        <button class="button-responsive"><i class="fa fa-bars"></i></button>
+        <ul id="navigation-menu">
+          <% if locale.to_s == "es" %>
+            <%= link_to_in_li "iLamps", '/categorias' %>
+            <%= link_to_in_li "iKids", '/categorias' %>
+            <%= link_to_in_li "iCoworking", '/categorias' %>
+            <%= link_to_in_li "iChristmas", '/categorias' %>
+             <li><button class="suscribe">Suscríbete</button></li>
+          <% else locale.to_s == "en" %>
+            <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
+            <%= link_to_in_li "iKids", '/categorias' + locale.to_s  %>
+            <%= link_to_in_li "iCoworking", '/categorias' + locale.to_s  %>
+            <%= link_to_in_li "iChristmas", '/categorias' + locale.to_s  %>
+            <li><button class="suscribe">Subscribe</button></li>
+          <% end %>
+        </ul>
+        <div class="header-register">
+          <div class="dropdown-caret">
+            <div class="caret-outer"></div>
+            <div class="caret-inner"></div>
+          </div>
+          <%= form_tag '/suscribir', target: "_top" do %>
+            <%= hidden_field_tag :group_name, 'suscriptores' %>
+            <%= hidden_field_tag :group, 'newsletter' %>
+            <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9n._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+            <%= submit_tag "Suscríbete a nuestras noticias" %>
+          <% end %>
         </div>
-        <%= form_tag '/suscribir', target: "_top" do %>
-          <%= hidden_field_tag :group_name, 'suscriptores' %>
-          <%= hidden_field_tag :group, 'newsletter' %>
-          <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9n._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
-          <%= submit_tag "Suscríbete a nuestras noticias" %>
-        <% end %>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </div>
