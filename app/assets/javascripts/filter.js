@@ -7,7 +7,7 @@ $(document).ready(function () {
   //slides
   $(function() {
   $(".slides").slidesjs({
-    height: 100,
+    height: 50,
     play: {
       auto: true
     }
