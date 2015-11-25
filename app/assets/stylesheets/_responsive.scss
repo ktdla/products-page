@@ -211,7 +211,7 @@
   }
   .new_comment { width: 85%; }
   #blog_posts { margin-top: 20px; }
-  #blog_post p { width: 100%; }
+  #blog_post p, #blog_post img { width: 100%; }
   #comments input, #comments textarea { margin-right: 0; }
   #comments input[type="submit"] { width: 100%; }
   footer {
