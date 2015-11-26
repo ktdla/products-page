@@ -31,8 +31,9 @@ $(document).ready(function () {
     //Sort elements
     //var list = $(".products article span").text();
     //var elements = $("#"+categoryProduct)
-
   });
+//filter with animation
+  $('#Container').mixItUp();
   //filter categories from home
   // $('#navigation-menu li').click(function(){
   //   var name = $(this).text().toLowerCase();

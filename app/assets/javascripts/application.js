@@ -6,3 +6,4 @@
 //= require filter
 //= require jquery.slides.min.js
 //= require jquery.magnific-popup
+//= require jquery.mixitup.min.js
