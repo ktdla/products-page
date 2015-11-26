@@ -22,6 +22,14 @@ $(document).ready(function () {
   $('.news .post').slice(0,3).show();
 
 //filter categories products
+//filter with animation
+  $('#Container').mixItUp({
+    animation: {
+      duration: 600,
+      effects: 'fade stagger(34ms) translateZ(-100px)',
+      easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+    }
+  });
   $(".active-filter li").click(function(){
     $(".active-filter li").removeClass("active");
     $(this).addClass("active");
@@ -31,8 +39,8 @@ $(document).ready(function () {
     //Sort elements
     //var list = $(".products article span").text();
     //var elements = $("#"+categoryProduct)
-
   });
+
   //filter categories from home
   // $('#navigation-menu li').click(function(){
   //   var name = $(this).text().toLowerCase();
