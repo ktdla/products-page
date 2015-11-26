@@ -22,6 +22,8 @@ $(document).ready(function () {
   $('.news .post').slice(0,3).show();
 
 //filter categories products
+//filter with animation
+  $('#Container').mixItUp();
   $(".active-filter li").click(function(){
     $(".active-filter li").removeClass("active");
     $(this).addClass("active");
@@ -32,8 +34,7 @@ $(document).ready(function () {
     //var list = $(".products article span").text();
     //var elements = $("#"+categoryProduct)
   });
-//filter with animation
-  $('#Container').mixItUp();
+
   //filter categories from home
   // $('#navigation-menu li').click(function(){
   //   var name = $(this).text().toLowerCase();
