@@ -95,18 +95,35 @@ header {
     }
   }
   .nav-responsive {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 30%;
     margin-top: 0;
     background-color: $black;
     display: none;
     height: 100%;
     z-index: 75;
+    .button-responsive {
+      background: none;
+      color: white;
+      margin-right: 18px;
+      padding: 10px 20px;
+    }
     #navigation-menu {
       display: block;
+      width: 100%;
+      margin-top: 50px;
+      li {
+        padding: 10px 5px;
+        margin-right: 0;
+        width: 80%;
+      }
       a { color: white; }
+      #collection-responsive {
+        display: none;
+        li { padding-right: 0; }
+      }
     }
   }
 }

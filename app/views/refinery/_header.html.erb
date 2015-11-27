@@ -12,7 +12,7 @@
         <% end %>
       </ul>
       <nav>
-        <button class="button-responsive"><i class="fa fa-bars"></i></button>
+        <button class="button-responsive" id="open"><i class="fa fa-bars"></i></button>
         <ul id="navigation-menu">
           <% if locale.to_s == "es" %>
             <%= link_to_in_li "Inicio", '/' %>
@@ -50,13 +50,13 @@
   </div>
 </div>
 <nav class="nav-responsive">
-  <button class="button-responsive"><i class="fa fa-times"></i></button>
+  <button class="button-responsive" id="exit"><i class="fa fa-times"></i></button>
   <ul id="navigation-menu">
     <% if locale.to_s == "es" %>
       <%= link_to_in_li "Inicio", '/' %>
       <%= link_to_in_li "Blog", '/blog' %>
       <li class="collection"><a>Colecciones<i class="fa fa-sort-desc"></i></a>
-        <ul id="collection">
+        <ul id="collection-responsive">
           <%= link_to_in_li "iLamps", '/colecciones' %>
           <%= link_to_in_li "iKids", '/colecciones' %>
           <%= link_to_in_li "iCoworking", '/colecciones' %>
