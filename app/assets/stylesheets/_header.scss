@@ -57,10 +57,11 @@ header {
       }
     }
     #collection {
-      display: none;
       position: absolute;
       z-index: 1;
-      margin-top: 23px;
+      display: none;
+      opacity: 0;
+      padding-top: 23px;
       margin-left: -45px;
       background-color: white;
       border-bottom-left-radius: 10px;
@@ -72,10 +73,10 @@ header {
         text-align: left;
       }
     }
+    .hide { display: none; }
     .collection:hover {
       #collection {
         opacity: 0.9;
-        display: block;
       }
     }
     .suscribe {
@@ -91,6 +92,38 @@ header {
       padding: 5px 10px;
       width: auto;
       &:hover { color: $orange; }
+    }
+  }
+  .nav-responsive {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    margin-top: 0;
+    background-color: $black;
+    display: none;
+    height: 100%;
+    z-index: 75;
+    .button-responsive {
+      background: none;
+      color: white;
+      margin-right: 18px;
+      padding: 10px 20px;
+    }
+    #navigation-menu {
+      display: block;
+      width: 100%;
+      margin-top: 50px;
+      li {
+        padding: 10px 5px;
+        margin-right: 0;
+        width: 80%;
+      }
+      a { color: white; }
+      #collection-responsive {
+        display: none;
+        li { padding-right: 0; }
+      }
     }
   }
 }
@@ -111,7 +144,6 @@ header {
   .logo { margin-top: 15px; }
 }
 .fixed.sticky { padding-bottom: 10px; }
-
 //div subscribe
 .dropdown-caret, .caret-outer, .caret-inner { position: absolute; }
 .dropdown-caret {

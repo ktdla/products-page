@@ -11,12 +11,23 @@ $(document).ready(function () {
 $(".suscribe").click(function(){
   $(".header-register").slideToggle(0);
 });
-
-//button responsive
-$('.button-responsive').click(function(){
-  $("#navigation-menu").toggle();
-  if ($("#navigation-menu").is(':hidden')) {
-    $("#navigation-menu").removeAttr('style');
+//show collection
+$('.collection a').hover(function(){
+  $('#collection').show();
+});
+$('.collection a').click(function(){
+  $('#collection').toggle();
+  $('#collection-responsive').toggle();
+});
+$(window).resize(function(){
+  if ($(window).width()>768) {
+    console.log($(window).width());
+    $(".nav-responsive").removeAttr('style');
   }
 });
+//button responsive
+$('.button-responsive').click(function(){
+  $(".nav-responsive").toggle("drop");
+});
+
 });
