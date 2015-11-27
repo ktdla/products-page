@@ -15,16 +15,21 @@
         <button class="button-responsive"><i class="fa fa-bars"></i></button>
         <ul id="navigation-menu">
           <% if locale.to_s == "es" %>
-            <%= link_to_in_li "iLamps", '/categorias' %>
-            <%= link_to_in_li "iKids", '/categorias' %>
-            <%= link_to_in_li "iCoworking", '/categorias' %>
-            <%= link_to_in_li "iChristmas", '/categorias' %>
-             <li><button class="suscribe">Suscríbete</button></li>
+            <%= link_to_in_li "Inicio", '/' %>
+            <%= link_to_in_li "Blog", '/blog' %>
+            <li>Colecciones
+              <ul id="collection">
+                <%= link_to_in_li "iLamps", '/colecciones' %>
+                <%= link_to_in_li "iKids", '/colecciones' %>
+                <%= link_to_in_li "iCoworking", '/colecciones' %>
+                <%= link_to_in_li "iChristmas", '/colecciones' %>
+              </ul>
+            </li>
+            <li><button class="suscribe">Suscríbete</button></li>
           <% else locale.to_s == "en" %>
-            <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
-            <%= link_to_in_li "iKids", '/categorias' + locale.to_s  %>
-            <%= link_to_in_li "iCoworking", '/categorias' + locale.to_s  %>
-            <%= link_to_in_li "iChristmas", '/categorias' + locale.to_s  %>
+            <%= link_to_in_li "Home", '/' + locale.to_s  %>
+            <%= link_to_in_li "Blog", '/blog' + locale.to_s  %>
+            <%= link_to_in_li "Collections", '/colecciones' + locale.to_s  %>
             <li><button class="suscribe">Subscribe</button></li>
           <% end %>
         </ul>
