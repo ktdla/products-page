@@ -48,6 +48,31 @@ header {
       display: inline-block;
       &:hover { color: $orange; }
     }
+    .collection {
+      cursor: pointer;
+      position: relative;
+    }
+    #collection {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      margin-left: -12px;
+      background-color: white;
+      border-radius: 3px;
+      opacity: 0;
+      li {
+        display: block;
+        margin-right: 0;
+        padding: 8px 15px;
+        text-align: left;
+      }
+    }
+    .collection:hover {
+      #collection {
+        opacity: 0.8;
+        display: block;
+      }
+    }
     .suscribe {
       background-color: white;
       border-radius: 10px;
