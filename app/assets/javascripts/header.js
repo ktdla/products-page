@@ -14,7 +14,7 @@ $(".suscribe").click(function(){
 
 //button responsive
 $('.button-responsive').click(function(){
-  $("#navigation-menu").toggle();
+  $(".nav-responsive").toggle();
   if ($("#navigation-menu").is(':hidden')) {
     $("#navigation-menu").removeAttr('style');
   }

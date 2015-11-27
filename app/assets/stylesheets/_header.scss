@@ -93,6 +93,16 @@ header {
       &:hover { color: $orange; }
     }
   }
+  .nav-responsive {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    margin-top: 0;
+    background-color: $black;
+    display: none;
+    #navigation-menu { display: block; }
+  }
 }
 
 .sticky {
@@ -111,7 +121,6 @@ header {
   .logo { margin-top: 15px; }
 }
 .fixed.sticky { padding-bottom: 10px; }
-
 //div subscribe
 .dropdown-caret, .caret-outer, .caret-inner { position: absolute; }
 .dropdown-caret {
