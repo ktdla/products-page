@@ -1,13 +1,13 @@
-#site_bar #site_bar_content #site_bar_refinery_cms_logo {
-      background-image: url('devacademy-logo.png') no-repeat 0 100% !important; }
+#site_bar #site_bar_content #site_bar_dev_logo {
+      background-image: url('dev-logo.png') no-repeat 0 100% !important; }
 
 #site_bar {
-  background: #234478;
+  background: #404650;
 
   #site_bar_content {
     color: white;
     font-family: Arial;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: normal;
     margin: 0 auto;
     max-width: 1080px;
@@ -41,8 +41,8 @@
       }
     }
 
-    #site_bar_refinery_cms_logo {
-      background: image_url('devacademy-logo.png') no-repeat 0 100%;
+    #site_bar_dev_logo {
+      background: image_url('dev-logo.png') no-repeat 0 100%;
       display: none;
       height: 29px;
       overflow: hidden;
@@ -120,7 +120,7 @@
         width: 38%;
       }
 
-      #site_bar_refinery_cms_logo {
+      #site_bar_dev_logo {
         float: left;
         width: 12%;
       }
