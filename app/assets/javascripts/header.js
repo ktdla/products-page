@@ -11,7 +11,13 @@ $(document).ready(function () {
 $(".suscribe").click(function(){
   $(".header-register").slideToggle(0);
 });
-
+//show collection
+$('.collection a').hover(function(){
+  $('#collection').show();
+});
+$('.collection a').click(function(){
+  $('#collection').toggle();
+});
 //button responsive
 $('.button-responsive').click(function(){
   $(".nav-responsive").toggle();
