@@ -27,7 +27,7 @@ $(window).resize(function(){
 });
 //button responsive
 $('.button-responsive').click(function(){
-  $(".nav-responsive").fadeToggle("fast","swing");
+  $(".nav-responsive").toggle("drop");
 });
 
 });
