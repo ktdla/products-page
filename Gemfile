@@ -75,3 +75,5 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'mailchimp-api', require: 'mailchimp'
 gem 'figaro'
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
+
+gem 'refinerycms-productos', path: 'vendor/extensions'

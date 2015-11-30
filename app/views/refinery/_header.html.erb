@@ -5,9 +5,10 @@
     <% end %>
     <div class="right">
       <ul class="language" id='locale'>
+      <%= request.path %>
         <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
             <li>
-              <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+              <%= link_to Refinery::I18n.locales[frontend_locale], link_for(request.path, frontend_locale) %>
             </li>
         <% end %>
       </ul>
@@ -28,8 +29,8 @@
             <li><button class="suscribe">Suscríbete</button></li>
           <% else locale.to_s == "en" %>
             <%= link_to_in_li "Home", '/' + locale.to_s  %>
-            <%= link_to_in_li "Blog", '/blog' + locale.to_s  %>
-            <%= link_to_in_li "Collections", '/colecciones' + locale.to_s  %>
+            <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
+            <%= link_to_in_li "Collections", '/' + locale.to_s  + 'colecciones' %>
             <li><button class="suscribe">Subscribe</button></li>
           <% end %>
         </ul>

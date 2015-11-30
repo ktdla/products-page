@@ -1,0 +1,42 @@
+sk:
+  refinery:
+    plugins:
+      productos:
+        title: Productos
+    productos:
+      admin:
+        productos:
+          actions:
+            create_new: Pridať Producto
+            reorder: Preusporiadať Productos
+            reorder_done: Koniec radenia Productos
+          records:
+            title: Productos
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Productos. Kliknite na "Pridať Producto" pre pridanie prvého producto.
+          producto:
+            view_live_html: Zobraziť náhľad producto<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť producto
+            delete: Zmazať producto
+      productos:
+        show:
+          other: Daľšie Productos
+  activerecord:
+    attributes:
+      'refinery/productos/producto':
+        nombre: Nombre
+        precio: Precio
+        tipo: Tipo
+        material: Material
+        categoria: Categoria
+        descripcion: Descripcion
+        medidas: Medidas
+        estado: Estado
+        espacio: Espacio
+        foto: Foto
+        imagen1: Imagen1
+        imagen2: Imagen2
+        imagen3: Imagen3
+        imagen4: Imagen4
+        plano1: Plano1
+        plano2: Plano2

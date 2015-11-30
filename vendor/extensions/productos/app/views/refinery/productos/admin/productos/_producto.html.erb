@@ -1,0 +1,27 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(producto) -%>">
+  <span class='title'>
+    <%= producto.nombre %>
+
+    <% if Refinery::I18n.frontend_locales.many? %>
+      <span class='preview'>
+        <% producto.translations.each do |translation| %>
+          <% if translation.nombre.present? %>
+            <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
+                         refinery.edit_productos_admin_producto_path(producto, :switch_locale => translation.locale),
+                         :class => 'locale' %>
+          <% end %>
+        <% end %>
+      </span>
+    <% end %>
+
+  </span>
+  <span class='actions'>
+    
+      <%= action_icon(:preview, refinery.productos_producto_path(producto), t('.view_live_html')) %>
+    
+    <%= action_icon(:edit,    refinery.edit_productos_admin_producto_path(producto), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.productos_admin_producto_path(producto), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: producto.nombre)}}  ) %>
+  </span>
+</li>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118144546) do
+ActiveRecord::Schema.define(version: 20151130211319) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -221,6 +221,45 @@ ActiveRecord::Schema.define(version: 20151118144546) do
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft"
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt"
+
+  create_table "refinery_producto_translations", force: :cascade do |t|
+    t.integer  "refinery_producto_id", null: false
+    t.string   "locale",               null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "nombre"
+    t.string   "tipo"
+    t.string   "material"
+    t.text     "descripcion"
+    t.text     "medidas"
+    t.string   "estado"
+    t.string   "espacio"
+  end
+
+  add_index "refinery_producto_translations", ["locale"], name: "index_refinery_producto_translations_on_locale"
+  add_index "refinery_producto_translations", ["refinery_producto_id"], name: "index_refinery_producto_translations_on_refinery_producto_id"
+
+  create_table "refinery_productos", force: :cascade do |t|
+    t.string   "nombre"
+    t.float    "precio"
+    t.string   "tipo"
+    t.string   "material"
+    t.string   "categoria"
+    t.text     "descripcion"
+    t.text     "medidas"
+    t.string   "estado"
+    t.string   "espacio"
+    t.integer  "foto_id"
+    t.integer  "imagen1_id"
+    t.integer  "imagen2_id"
+    t.integer  "imagen3_id"
+    t.integer  "imagen4_id"
+    t.integer  "plano1_id"
+    t.integer  "plano2_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
