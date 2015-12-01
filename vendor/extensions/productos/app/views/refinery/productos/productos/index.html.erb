@@ -1,11 +1,44 @@
 <% content_for :body do %>
-  <ul id="productos">
-    <% @productos.each do |producto| %>
-      <li>
-        <%= link_to producto.nombre, refinery.productos_producto_path(producto) %>
-      </li>
-    <% end %>
-  </ul>
+  <section class="products container" id="Container">
+  <% if locale.to_s == "es" %>
+    <h2>Productos</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filtra nuestros productos</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Precio</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Tipo</li>
+      </ul>
+    </div>
+  <% else %>
+    <h2>Products</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filter our products</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Price</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Type</li>
+      </ul>
+    </div>
+  <% end %>
+    <div>
+      <% @productos.each do |producto| %>
+        <%= content_tag :article, class:'mix', data: {type:producto.tipo, material:producto.material, price:producto.precio} do %>
+          <div class="container-overlay">
+            <%= link_to refinery.productos_producto_path(producto) do %>
+              <div class="overlay"></div>
+              <i class="fa fa-search-plus info"></i>
+              <%= image_fu producto.foto %>
+            <% end %>
+          </div>
+          <span class="title"> <%= producto.nombre %> </span>
+          <span class="tagline" id="precio">S/. <%= producto.precio %></span>
+          <span class="tagline" id="material"><%= producto.material %></span>
+          <span class="tagline" id="tipo"><%= producto.tipo %></span>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
 <% end %>
 
 <%= render '/refinery/content_page' %>

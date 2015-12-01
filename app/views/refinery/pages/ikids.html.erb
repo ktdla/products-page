@@ -6,15 +6,27 @@
   </div>
 </section>
 <section class="products container" id="Container">
-  <h2>Productos</h2>
-  <div class="filterProducts">
-    <span class="filter-toggle"><i class="fa fa-filter"></i> Filtra nuestros productos</span>
-    <ul class="active-filter">
-      <li class="active sort" data-sort="price:asc">Precio</li>
-      <li class="sort" data-sort="material:asc">Material</li>
-      <li class="sort" data-sort="type:asc">Tipo</li>
-    </ul>
-  </div>
+  <% if locale.to_s == "es" %>
+    <h2>Productos</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filtra nuestros productos</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Precio</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Tipo</li>
+      </ul>
+    </div>
+    <% else %>
+    <h2>Products</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filter our products</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Price</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Type</li>
+      </ul>
+    </div>
+  <% end %>
   <div>
     <% @productos.each do |producto| %>
     <% if producto.categoria == 'iKids' %>
@@ -59,13 +71,24 @@
 </section>
 <section class="register">
   <div class="container">
-    <h2>Regístrate para recibir</h2>
-    <%= form_tag '/suscribir', target: "_top" do %>
-      <%= hidden_field_tag :group_name, 'suscriptores' %>
-      <%= hidden_field_tag :group, 'iKids' %>
-      <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
-      <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
-    <%= submit_tag "Enviar" %>
+    <% if locale.to_s == "es" %>
+      <h2>Regístrate para recibir</h2>
+      <%= form_tag '/suscribir', target: "_top" do %>
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'iKids' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= submit_tag "Enviar" %>
+      <% end %>
+    <% else %>
+      <h2>Register for ...</h2>
+      <%= form_tag '/suscribir', target: "_top" do %>
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'iKids' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= submit_tag "Submit" %>
+      <% end %>
     <% end %>
   </div>
 </section>
