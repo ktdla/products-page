@@ -1,0 +1,94 @@
+<section class="main background-image">
+  <div class="category">
+    <%= image_tag 'logo-categoria.png' %>
+    <h2>Breve descripción de la linea del producto</h2>
+    <a class="popup-vimeo" href="https://vimeo.com/45830194"><%= image_tag 'reproductor.png' %></a>
+  </div>
+</section>
+<section class="products container" id="Container">
+  <% if locale.to_s == "es" %>
+    <h2>Productos</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filtra nuestros productos</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Precio</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Tipo</li>
+      </ul>
+    </div>
+    <% else %>
+    <h2>Products</h2>
+    <div class="filterProducts">
+      <span class="filter-toggle"><i class="fa fa-filter"></i> Filter our products</span>
+      <ul class="active-filter">
+        <li class="active sort" data-sort="price:asc">Price</li>
+        <li class="sort" data-sort="material:asc">Material</li>
+        <li class="sort" data-sort="type:asc">Type</li>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <% @productos.each do |producto| %>
+    <% if producto.categoria == 'iChristmas' %>
+      <%= content_tag :article, class:'mix', data: {type:producto.tipo, material:producto.material, price:producto.precio} do %>
+        <div class="container-overlay">
+          <%= link_to refinery.productos_producto_path(producto) do %>
+            <div class="overlay"></div>
+            <i class="fa fa-search-plus info"></i>
+            <%= image_fu producto.foto %>
+          <% end %>
+        </div>
+        <span class="title"> <%= producto.nombre %> </span>
+        <span class="tagline" id="precio">S/. <%= producto.precio %></span>
+        <span class="tagline" id="material"><%= producto.material %></span>
+        <span class="tagline" id="tipo"><%= producto.tipo %></span>
+      <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</section>
+<section class="background-image process">
+  <div class="container">
+    <h2>Proceso de compra</h2>
+    <article>
+      <%= image_tag 'proceso/1.png' %>
+      <span>Paso 1 para la compra</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/2.png' %>
+      <span>Paso 2 para la compra</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/3.png' %>
+      <span>Paso 3 para la compra</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/4.png' %>
+      <span>Paso 4 para la compra</span>
+    </article>
+    <button>Empieza comprando ahora</button>
+  </div>
+</section>
+<section class="register">
+  <div class="container">
+    <% if locale.to_s == "es" %>
+      <h2>Regístrate para recibir</h2>
+      <%= form_tag '/suscribir', target: "_top" do %>
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'iChristmas' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= submit_tag "Enviar" %>
+      <% end %>
+    <% else %>
+      <h2>Register for ...</h2>
+      <%= form_tag '/suscribir', target: "_top" do %>
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'iChristmas' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= submit_tag "Submit" %>
+      <% end %>
+    <% end %>
+  </div>
+</section>

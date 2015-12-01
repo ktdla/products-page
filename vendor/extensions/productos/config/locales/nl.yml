@@ -1,0 +1,42 @@
+nl:
+  refinery:
+    plugins:
+      productos:
+        title: Productos
+    productos:
+      admin:
+        productos:
+          actions:
+            create_new: Nieuwe Producto toevoegen
+            reorder: De volgorde van de Productos wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Producto-volgorde
+          records:
+            title: Productos
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Productos. Druk op 'Nieuwe Producto toevoegen' om de eerste toe te voegen.
+          producto:
+            view_live_html: Deze producto op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze producto
+            delete: Deze producto definitief verwijderen
+      productos:
+        show:
+          other: Andere Productos
+  activerecord:
+    attributes:
+      'refinery/productos/producto':
+        nombre: Nombre
+        precio: Precio
+        tipo: Tipo
+        material: Material
+        categoria: Categoria
+        descripcion: Descripcion
+        medidas: Medidas
+        estado: Estado
+        espacio: Espacio
+        foto: Foto
+        imagen1: Imagen1
+        imagen2: Imagen2
+        imagen3: Imagen3
+        imagen4: Imagen4
+        plano1: Plano1
+        plano2: Plano2

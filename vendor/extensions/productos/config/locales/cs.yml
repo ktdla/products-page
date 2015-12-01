@@ -1,0 +1,42 @@
+cs:
+  refinery:
+    plugins:
+      productos:
+        title: Productos
+    productos:
+      admin:
+        productos:
+          actions:
+            create_new: Přidat Producto
+            reorder: Řadit Productos
+            reorder_done: Konec řazení Productos
+          records:
+            title: Productos
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Productos. Zvolte "Přidat Producto" pro přidání prvního producto.
+          producto:
+            view_live_html: Zobrazit náhled producto<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit producto
+            delete: Smazat producto
+      productos:
+        show:
+          other: Další Productos
+  activerecord:
+    attributes:
+      'refinery/productos/producto':
+        nombre: Nombre
+        precio: Precio
+        tipo: Tipo
+        material: Material
+        categoria: Categoria
+        descripcion: Descripcion
+        medidas: Medidas
+        estado: Estado
+        espacio: Espacio
+        foto: Foto
+        imagen1: Imagen1
+        imagen2: Imagen2
+        imagen3: Imagen3
+        imagen4: Imagen4
+        plano1: Plano1
+        plano2: Plano2

@@ -1,0 +1,42 @@
+tr:
+  refinery:
+    plugins:
+      productos:
+        title: Productos
+    productos:
+      admin:
+        productos:
+          actions:
+            create_new: Yeni Ekle Producto
+            reorder: Tekrar sirala Productos
+            reorder_done: Tekrar siralama tamamlandiProductos
+          records:
+            title: Productos
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Productos yok henuz.  Tikla "Yeni Ekle Producto" eklemek senin ilk producto.
+          producto:
+            view_live_html: Bunu canlu producto goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle producto
+            delete: Bunu Sil producto sonsuza dek
+      productos:
+        show:
+          other: Diger Productos
+  activerecord:
+    attributes:
+      'refinery/productos/producto':
+        nombre: Nombre
+        precio: Precio
+        tipo: Tipo
+        material: Material
+        categoria: Categoria
+        descripcion: Descripcion
+        medidas: Medidas
+        estado: Estado
+        espacio: Espacio
+        foto: Foto
+        imagen1: Imagen1
+        imagen2: Imagen2
+        imagen3: Imagen3
+        imagen4: Imagen4
+        plano1: Plano1
+        plano2: Plano2

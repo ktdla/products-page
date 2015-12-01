@@ -38,7 +38,11 @@
   <h2>Productos</h2>
   <article>
     <div class="container-overlay">
-      <a href="/categorias">
+    <% if locale.to_s == 'es' %>
+      <a href="/ilamps">
+    <% else %>
+      <a href="/en/ilamps">
+    <% end %>
         <div class="overlay"></div>
         <div class="info">
           <h3>iLamps</h3>
@@ -50,7 +54,11 @@
   </article>
   <article>
     <div class="container-overlay">
-      <a href="/categorias">
+      <% if locale.to_s == 'es' %>
+        <a href="/icoworking">
+      <% else %>
+        <a href="/en/icoworking">
+      <% end %>
         <div class="overlay"></div>
         <div class="info">
           <h3>iCoworking</h3>
@@ -62,7 +70,11 @@
   </article>
   <article>
     <div class="container-overlay">
-      <a href="/categorias">
+      <% if locale.to_s == 'es' %>
+        <a href="/ichristmas">
+      <% else %>
+        <a href="/en/ichristmas">
+      <% end %>
         <div class="overlay"></div>
         <div class="info">
           <h3>iChristmas</h3>
@@ -74,10 +86,30 @@
   </article>
   <article>
     <div class="container-overlay">
-      <a href="/categorias">
+      <% if locale.to_s == 'es' %>
+        <a href="/ikids">
+      <% else %>
+        <a href="/en/ikids">
+      <% end %>
         <div class="overlay"></div>
         <div class="info">
           <h3>iKids</h3>
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ikids.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ibaby">
+      <% else %>
+        <a href="/en/ibaby">
+      <% end %>
+        <div class="overlay"></div>
+        <div class="info">
+          <h3>iBaby</h3>
           <i class="fa fa-search-plus"></i>
         </div>
         <%= image_tag 'categorias/ikids.jpg' %>
@@ -177,18 +209,35 @@
   </div>
 </section>
 <section class="container subscription">
-  <h2>Regístrate para recibir...</h2>
-  <article class="contact">
-    <%= form_tag '/suscribir', target: "_top" do %>
-    <div class="left">
-      <%= hidden_field_tag :group_name, 'suscriptores' %>
-      <%= hidden_field_tag :group, 'home' %>
-      <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
-      <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
-      <%= text_field_tag :city, nil, type: "text", placeholder: "Ciudad" %>
-    </div>
-    <%= text_area_tag :comment, nil, type: "text", placeholder: "Mensaje", maxlength: 255 %>
-    <%= submit_tag "Enviar" %>
-    <% end %>
-  </article>
+  <% if locale.to_s == 'es' %>
+    <h2>Regístrate para recibir...</h2>
+    <article class="contact">
+      <%= form_tag '/suscribir', target: "_top" do %>
+      <div class="left">
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'home' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :city, nil, type: "text", placeholder: "Ciudad" %>
+      </div>
+      <%= text_area_tag :comment, nil, type: "text", placeholder: "Mensaje", maxlength: 255 %>
+      <%= submit_tag "Enviar" %>
+      <% end %>
+    </article>
+  <% else %>
+    <h2>Register for...</h2>
+    <article class="contact">
+      <%= form_tag '/suscribir', target: "_top" do %>
+      <div class="left">
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'home' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :city, nil, type: "text", placeholder: "City" %>
+      </div>
+      <%= text_area_tag :comment, nil, type: "text", placeholder: "Message", maxlength: 255 %>
+      <%= submit_tag "Submit" %>
+      <% end %>
+    </article>
+  <% end %>
 </section>

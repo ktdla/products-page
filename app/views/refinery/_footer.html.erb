@@ -6,9 +6,13 @@
   </div>
   <div class="center">
     <ul class="contact">
-      <li><a href="mailto:hello@ifurniture.pe"><i class="fa fa-envelope"></i> hello@ifurniture.pe</a></li>
+      <li><a href="mailto:hello@ifurniture.pe"><i class="fa fa-envelope"></i> hola@ifurniture.pe</a></li>
       <li><a href="telf:+5112222222"><i class="fa fa-phone"></i> (01)-2222222</a></li>
+      <% if locale.to_s == "es" %>
       <li><a href="/ubicacion"><i class="fa fa-map-marker"></i> Ubícanos</a></li>
+      <% else %>
+      <li><a href="/en/ubicacion"><i class="fa fa-map-marker"></i> Find us</a></li>
+      <% end %>
     </ul>
     <ul class="social-links">
       <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
@@ -18,26 +22,37 @@
       <li><a href="https://vimeo.com/ifurniturepe" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
       <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
     </ul>
+    <% if locale.to_s == "es" %>
     <ul class="copyright">
       <li>Hecho en Perú</li>
       <li><%= t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %></li>
     </ul>
-    <p>Desarrollado por devAcademy</p>
+    <%= link_to "Desarrollado por devAcademy", "https://devacademy.la", :target => "_blank" %>
+    <% else %>
+    <ul class="copyright">
+      <li>Made in Peru</li>
+      <li><%= t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %></li>
+    </ul>
+    <%= link_to "Develop for devAcademy", "https://devacademy.la", :target => "_blank" %>
+    <% end %>
   </div>
   <nav class="right">
     <ul id="navigation-menu">
       <% if locale.to_s == "es" %>
-        <%= link_to_in_li "iLamps", '/categorias' %>
-        <%= link_to_in_li "iKids", '/categorias' %>
-        <%= link_to_in_li "iCoworking", '/categorias' %>
-        <%= link_to_in_li "iChristmas", '/categorias' %>
+        <%= link_to_in_li "iLamps", '/ilamps' %>
+        <%= link_to_in_li "iKids", '/ikids' %>
+        <%= link_to_in_li "iCoworking", '/icoworking' %>
+        <%= link_to_in_li "iChristmas", '/ichristmas' %>
+        <%= link_to_in_li "iBaby", '/ibaby' %>
       <% else locale.to_s == "en" %>
-        <%= link_to_in_li "iLamps", '/categorias' + locale.to_s  %>
-        <%= link_to_in_li "iKids", '/categorias' + locale.to_s  %>
-        <%= link_to_in_li "iCoworking", '/categorias' + locale.to_s  %>
-        <%= link_to_in_li "iChristmas", '/categorias' + locale.to_s  %>
+        <%= link_to_in_li "iLamps", '/' + locale.to_s + '/ilamps'  %>
+        <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids'  %>
+        <%= link_to_in_li "iCoworking", '/' + locale.to_s + '/icoworking' %>
+        <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
+        <%= link_to_in_li "iBaby", '/' + locale.to_s + '/ibaby' %>
       <% end %>
     </ul>
   </nav>
 </div>
+
 <script id="dsq-count-scr" src="//ifurniture.disqus.com/count.js" async></script>

@@ -1,0 +1,125 @@
+<%= form_for [refinery, :productos_admin, @producto] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @producto,
+              :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+              :current_locale => Globalize.locale %>
+  <div class='field'>
+    <%= f.label :nombre -%>
+    <%= f.text_field :nombre, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :precio -%>
+    <%= f.text_field :precio -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :tipo -%>
+    <%= f.text_field :tipo -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :material -%>
+    <%= f.text_field :material -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :categoria -%>
+    <%= f.text_field :categoria -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:descripcion, :medidas],
+                :object => "productos/producto" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :estado -%>
+    <%= f.text_field :estado -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :espacio -%>
+    <%= f.text_field :espacio -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :foto -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :foto_id,
+               :image => @producto.foto,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :imagen1 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :imagen1_id,
+               :image => @producto.imagen1,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :imagen2 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :imagen2_id,
+               :image => @producto.imagen2,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :imagen3 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :imagen3_id,
+               :image => @producto.imagen3,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :imagen4 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :imagen4_id,
+               :image => @producto.imagen4,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :plano1 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :plano1_id,
+               :image => @producto.plano1,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :plano2 -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :plano2_id,
+               :image => @producto.plano2,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.productos.admin.productos.producto'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @producto.nombre) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>
