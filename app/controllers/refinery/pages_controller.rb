@@ -1,6 +1,7 @@
 module Refinery
   class PagesController < ::ApplicationController
     include Pages::RenderOptions
+    include Productos
 
     before_action :find_page, :set_canonical
     before_action :error_404, :unless => :current_user_can_view_page?
@@ -14,6 +15,10 @@ module Refinery
       render_with_templates?
     end
 
+    def colecciones
+      @productos = [1,2,3]
+    end
+
     # This action can be accessed normally, or as nested pages.
     # Assuming a page named "mission" that is a child of "about",
     # you can access the pages with the following URLs:
@@ -25,6 +30,7 @@ module Refinery
     #   GET /about/mission
     #
     def show
+      @productos = Refinery::Productos::Producto.all
       if should_skip_to_first_child?
         redirect_to refinery.url_for(first_live_child.url) and return
       elsif page.link_url.present?

@@ -5,10 +5,9 @@
     <% end %>
     <div class="right">
       <ul class="language" id='locale'>
-      <%= request.path %>
         <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
             <li>
-              <%= link_to Refinery::I18n.locales[frontend_locale], link_for(request.path, frontend_locale) %>
+              <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
             </li>
         <% end %>
       </ul>
@@ -20,17 +19,26 @@
             <%= link_to_in_li "Blog", '/blog' %>
             <li class="collection"><a>Colecciones<i class="fa fa-sort-desc"></i></a>
               <ul id="collection">
-                <%= link_to_in_li "iLamps", '/colecciones' %>
-                <%= link_to_in_li "iKids", '/colecciones' %>
-                <%= link_to_in_li "iCoworking", '/colecciones' %>
-                <%= link_to_in_li "iChristmas", '/colecciones' %>
+                <%= link_to_in_li "iLamps", '/ilamps' %>
+                <%= link_to_in_li "iKids", '/ikids' %>
+                <%= link_to_in_li "iCoworking", '/icoworking' %>
+                <%= link_to_in_li "iChristmas", '/ichristmas' %>
+                <%= link_to_in_li "iBaby", '/ibaby' %>
               </ul>
             </li>
             <li><button class="suscribe">Suscríbete</button></li>
           <% else locale.to_s == "en" %>
             <%= link_to_in_li "Home", '/' + locale.to_s  %>
             <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
-            <%= link_to_in_li "Collections", '/' + locale.to_s  + 'colecciones' %>
+            <li class="collection"><a>Colections<i class="fa fa-sort-desc"></i></a>
+              <ul id="collection">
+                <%= link_to_in_li "iLamps", '/' + locale.to_s + 'ilamps' %>
+                <%= link_to_in_li "iKids", '/' + locale.to_s + 'ikids' %>
+                <%= link_to_in_li "iCoworking", '/' + locale.to_s + 'icoworking' %>
+                <%= link_to_in_li "iChristmas", '/' + locale.to_s + 'ichristmas' %>
+                <%= link_to_in_li "iBaby", '/' + locale.to_s + 'ibaby' %>
+              </ul>
+            </li>
             <li><button class="suscribe">Subscribe</button></li>
           <% end %>
         </ul>

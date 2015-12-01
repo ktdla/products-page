@@ -1,117 +1,103 @@
-<% content_for :body_content_title do %>
-  <%= @producto.nombre %>
-<% end %>
-
 <% content_for :body do %>
-  <section>
-    <h1>Nombre</h1>
-    <p>
-      <%=raw @producto.nombre %>
-    </p>
-  </section>
-  <section>
-    <h1>Precio</h1>
-    <p>
-      <%=raw @producto.precio %>
-    </p>
-  </section>
-  <section>
-    <h1>Tipo</h1>
-    <p>
-      <%=raw @producto.tipo %>
-    </p>
-  </section>
-  <section>
-    <h1>Material</h1>
-    <p>
-      <%=raw @producto.material %>
-    </p>
-  </section>
-  <section>
-    <h1>Categoria</h1>
-    <p>
-      <%=raw @producto.categoria %>
-    </p>
-  </section>
-  <section>
-    <h1>Descripcion</h1>
-    <p>
-      <%=raw @producto.descripcion %>
-    </p>
-  </section>
-  <section>
-    <h1>Medidas</h1>
-    <p>
-      <%=raw @producto.medidas %>
-    </p>
-  </section>
-  <section>
-    <h1>Estado</h1>
-    <p>
-      <%=raw @producto.estado %>
-    </p>
-  </section>
-  <section>
-    <h1>Espacio</h1>
-    <p>
-      <%=raw @producto.espacio %>
-    </p>
-  </section>
-  <section>
-    <h1>Foto</h1>
-    <p>
-      <%= image_fu @producto.foto, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Imagen1</h1>
-    <p>
+  <section class="container product-description">
+    <h2><%=raw @producto.nombre %></h2>
+    <div class="description">
+      <div class="left">
+        <ul>
+          <li>General</li>
+          <li>Descripción</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit.<%=raw @producto.descripcion %><%=raw @producto.medidas %></p>
+        <div class="status">
+          <article>
+            <span class="title">Diseñado por</span>
+            <%= image_tag 'equipo/equipo1.png'%>
+            <span class="tagline"><%=raw @producto.precio %></span>
+          </article>
+          <article>
+            <span class="title">Estado del producto</span>
+            <%= image_tag 'export.png'%>
+            <span class="tagline"><%=raw @producto.material %></span>
+          </article>
+        </div>
+      </div>
+      <div class="right">
+        <%= image_fu @producto.foto, nil %>
+      </div>
+    </div>
+    <div class="more-images">
       <%= image_fu @producto.imagen1, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Imagen2</h1>
-    <p>
       <%= image_fu @producto.imagen2, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Imagen3</h1>
-    <p>
       <%= image_fu @producto.imagen3, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Imagen4</h1>
-    <p>
       <%= image_fu @producto.imagen4, nil %>
-    </p>
+    </div>
   </section>
-  <section>
-    <h1>Plano1</h1>
-    <p>
+  <section class="maps">
+    <article>
       <%= image_fu @producto.plano1, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Plano2</h1>
-    <p>
+    </article>
+    <article>
       <%= image_fu @producto.plano2, nil %>
-    </p>
+    </article>
+  </section>
+  <section class="background-image process">
+    <div class="container">
+      <h2>Proceso de compra</h2>
+      <article>
+        <%= image_tag 'proceso/1.png' %>
+        <span>Paso 1 para la compra</span>
+      </article>
+      <article>
+        <%= image_tag 'proceso/2.png' %>
+        <span>Paso 2 para la compra</span>
+      </article>
+      <article>
+        <%= image_tag 'proceso/3.png' %>
+        <span>Paso 3 para la compra</span>
+      </article>
+      <article>
+        <%= image_tag 'proceso/4.png' %>
+        <span>Paso 4 para la compra</span>
+      </article>
+      <button>Empieza comprando ahora</button>
+    </div>
+  </section>
+  <section class="container">
+    <h2>Preguntas</h2>
+    <div id="disqus_thread"></div>
+    <script>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//ifurniture.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript target="_blank" " rel="nofollow">comments powered by Disqus.</a></noscript>
+  </section>
+  <section class="register">
+    <div class="container">
+      <h2>Regístrate para recibir</h2>
+      <%= form_tag '/suscribir', target: "_top" do %>
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, @producto.categoria %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+      <%= submit_tag "Enviar" %>
+      <% end %>
+    </div>
   </section>
 <% end %>
-
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="productos">
-      <% @productos.each do |producto| %>
-        <li>
-          <%= link_to producto.nombre, refinery.productos_producto_path(producto) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
 <%= render '/refinery/content_page' %>
