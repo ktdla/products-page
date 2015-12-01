@@ -63,7 +63,11 @@
     </div>
   </section>
   <section class="container">
-    <h2>Preguntas</h2>
+    <% if locale.to_s == "es" %>
+      <h2>Preguntas</h2>
+    <% else %>
+      <h2>Questions</h2>
+    <% end %>
     <div id="disqus_thread"></div>
     <script>
     /**
@@ -89,13 +93,24 @@
   </section>
   <section class="register">
     <div class="container">
-      <h2>Regístrate para recibir</h2>
-      <%= form_tag '/suscribir', target: "_top" do %>
-        <%= hidden_field_tag :group_name, 'suscriptores' %>
-        <%= hidden_field_tag :group, @producto.categoria %>
-        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
-        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
-      <%= submit_tag "Enviar" %>
+      <% if locale.to_s == "es" %>
+        <h2>Regístrate para recibir</h2>
+        <%= form_tag '/suscribir', target: "_top" do %>
+          <%= hidden_field_tag :group_name, 'suscriptores' %>
+          <%= hidden_field_tag :group, @producto.categoria %>
+          <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+          <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= submit_tag "Enviar" %>
+        <% end %>
+      <% else %>
+        <h2>Register for</h2>
+        <%= form_tag '/suscribir', target: "_top" do %>
+          <%= hidden_field_tag :group_name, 'suscriptores' %>
+          <%= hidden_field_tag :group, @producto.categoria %>
+          <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
+          <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= submit_tag "Submit" %>
+        <% end %>
       <% end %>
     </div>
   </section>

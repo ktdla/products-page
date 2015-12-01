@@ -15,10 +15,6 @@ module Refinery
       render_with_templates?
     end
 
-    def colecciones
-      @productos = [1,2,3]
-    end
-
     # This action can be accessed normally, or as nested pages.
     # Assuming a page named "mission" that is a child of "about",
     # you can access the pages with the following URLs:
