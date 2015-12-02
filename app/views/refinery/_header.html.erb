@@ -70,17 +70,27 @@
       <%= link_to_in_li "Blog", '/blog' %>
       <li class="collection"><a>Colecciones<i class="fa fa-sort-desc"></i></a>
         <ul id="collection-responsive">
-          <%= link_to_in_li "iLamps", '/colecciones' %>
-          <%= link_to_in_li "iKids", '/colecciones' %>
-          <%= link_to_in_li "iCoworking", '/colecciones' %>
-          <%= link_to_in_li "iChristmas", '/colecciones' %>
+          <%= link_to_in_li "iLamps", '/ilamps' %>
+          <%= link_to_in_li "iKids", '/ikids' %>
+          <%= link_to_in_li "iCoworking", '/icoworking' %>
+          <%= link_to_in_li "iBaby", '/ibaby' %>
+          <%= link_to_in_li "iChristmas", '/ichristmas' %>
+          <%= link_to_in_li "iChristmas", '/ichristmas' %>
         </ul>
       </li>
       <li><button class="suscribe">Suscríbete</button></li>
     <% else locale.to_s == "en" %>
       <%= link_to_in_li "Home", '/' + locale.to_s  %>
-      <%= link_to_in_li "Blog", '/blog' + locale.to_s  %>
-      <%= link_to_in_li "Collections", '/colecciones' + locale.to_s  %>
+      <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog' %>
+      <li class="collection"><a>Collections<i class="fa fa-sort-desc"></i></a>
+              <ul id="collection-responsive">
+                <%= link_to_in_li "iLamps", '/' + locale.to_s + '/ilamps' %>
+                <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids' %>
+                <%= link_to_in_li "iCoworking", '/' + locale.to_s + 'icoworking' %>
+                <%= link_to_in_li "iChristmas", '/' + locale.to_s + 'ichristmas' %>
+                <%= link_to_in_li "iBaby", '/' + locale.to_s + 'ibaby' %>
+              </ul>
+            </li>
       <li><button class="suscribe">Subscribe</button></li>
     <% end %>
   </ul>

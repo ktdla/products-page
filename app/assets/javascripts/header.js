@@ -16,8 +16,8 @@ $('.collection a').hover(function(){
   $('#collection').show();
 });
 $('.collection a').click(function(){
-  $('#collection').toggle();
-  $('#collection-responsive').toggle();
+  $('#collection').slideToggle();
+  $('#collection-responsive').slideToggle();
 });
 $(window).resize(function(){
   if ($(window).width()>768) {

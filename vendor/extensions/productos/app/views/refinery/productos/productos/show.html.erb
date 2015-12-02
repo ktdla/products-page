@@ -2,6 +2,9 @@
   <section class="container product-description">
     <h2><%=raw @producto.nombre %></h2>
     <div class="description">
+      <div class="right">
+        <%= image_fu @producto.foto, nil %>
+      </div>
       <div class="left">
         <ul>
           <li>General</li>
@@ -20,9 +23,6 @@
             <span class="tagline"><%=raw @producto.material %></span>
           </article>
         </div>
-      </div>
-      <div class="right">
-        <%= image_fu @producto.foto, nil %>
       </div>
     </div>
     <div class="more-images">

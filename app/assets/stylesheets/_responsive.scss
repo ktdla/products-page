@@ -126,10 +126,32 @@
   .product-description {
     .left, .right { width: 100%; }
     .left .status, .right { margin-top: 30px; }
+    .right img { height: 200px; }
     .more-images img {
       margin: 0 2% 15px 0;
       width: 49%;
       &:nth-child(2n) { margin-right: 0; }
+    }
+  }
+  .maps {
+    article { 
+      width: 80%;
+      height: auto;
+      margin-bottom: 50px;
+      @include span-columns(12);
+      display: block;
+      float: none;
+      position: relative;
+      &:last-child {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-bottom: 0;
+      }
+      img {
+        max-width: 80%;
+        height: auto;
+      }
     }
   }
   .new_comment { width: 70%; }

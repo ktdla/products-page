@@ -270,6 +270,7 @@ button {
 .product-description {
   overflow: hidden;
   .left {
+    float: left;
     @include span-columns(4);
     ul {
       padding: 0;
@@ -316,6 +317,7 @@ button {
     }
   }
   .right {
+    float: right !important;
     @include span-columns(8);
     margin-right: 0;
     text-align: right;
