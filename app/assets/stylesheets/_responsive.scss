@@ -36,6 +36,7 @@
 @media screen and (max-width: 768px) {
   h2, h3 { margin-bottom: 20px; }
   header {
+    nav { margin-top: 0; }
     .container { overflow: hidden; }
     .language { padding-left: 0; }
     .button-responsive {
@@ -69,7 +70,7 @@
     }
   }
   .main-video video { height: 100%; }
-  section.container { padding: 30px 20px; }
+  section.container { padding: 50px 25px; }
   .products {
     .filterProducts ul {
       margin: 19px auto 0;
@@ -174,19 +175,20 @@
   h2 { font-size: 28px; }
   header {
     .logo {
-      width: 45%;
-      object-fit: initial;
+      max-width: 45%;
+      height: auto;
     }
     .right { width: 55%; }
     .nav-responsive { width: 50%; }
   }
-  section div.container { padding: 30px 10px; }
+  section div.container, section.container { padding: 50px 25px; }
   .slides p { padding: 0; }
   .category { width: 90%; }
   .category>img { width: 100%; }
   .categories article {
     width: 100%;
   }
+  .slider { font-size: 18px; }
   .products div article {
     width: 100%;
     margin-right: 0;

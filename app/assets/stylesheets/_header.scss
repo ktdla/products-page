@@ -134,14 +134,16 @@ header {
   padding-bottom: 15px;
 }
 .fixed {
-  background-color: white;
-  left:0;
-  position: fixed;
-  top:0;
-  width: 100%;
-  z-index: 70;
-  ul.language { display: none; }
-  .logo { margin-top: 15px; }
+  @media screen and (min-width: 768px) {
+    background-color: white;
+    left:0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 70;
+    ul.language { display: none; }
+    .logo { margin-top: 15px; }
+  }
 }
 .fixed.sticky { padding-bottom: 10px; }
 //div subscribe
