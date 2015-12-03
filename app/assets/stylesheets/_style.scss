@@ -592,3 +592,12 @@ button {
 }
 .scrolloff { pointer-events: none; }
 #Container .mix, #body_content_title { display: none; }
+.not-found {
+  text-align: center;
+  img { 
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+}
