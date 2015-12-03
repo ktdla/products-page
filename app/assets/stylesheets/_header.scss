@@ -100,7 +100,7 @@ header {
     right: 0;
     width: 30%;
     margin-top: 0;
-    background-color: $black;
+    background-color: rgba(73, 74, 77, 0.9);
     display: none;
     height: 100%;
     z-index: 75;
@@ -122,7 +122,11 @@ header {
       a { color: white; }
       #collection-responsive {
         display: none;
-        li { padding-right: 0; }
+        li { 
+          padding: 5px 17px 5px 0; 
+          &:first-child { padding-top: 15px; }
+        }
+        a { color: $light-gray; }
       }
     }
   }

@@ -237,6 +237,7 @@
     .more-images img { height: 120px; }
   }
   .subscription {
+    input[type="submit"] { max-width: 100%; }
     .left, textarea {
       margin-right: 0;
       width: 100%;
