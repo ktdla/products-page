@@ -6,21 +6,21 @@
 <section class="map container">
   <h2>Ubícanos</h2>
   <div class="left">
-    <article class="address">
+    <article class="address" id="direccion1">
       <span>Dirección 1</span>
       <ul>
         <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
         <li><i class="fa fa-phone"></i> (01)-2222222</li>
       </ul>
     </article>
-    <article class="address">
+    <article class="address" id="direccion2">
       <span>Dirección 2</span>
       <ul>
         <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
         <li><i class="fa fa-phone"></i> (01)-2222222</li>
       </ul>
     </article>
-    <article class="address">
+    <article class="address" id="direccion3">
       <span>Dirección 3</span>
       <ul>
         <li><i class="fa fa-map-marker"></i> Av. Nombre de la Calle 111 Departamento - Perú</li>
@@ -35,7 +35,7 @@
     <h2>Regístrate para recibir</h2>
     <%= form_tag '/suscribir', target: "_top" do %>
       <%= hidden_field_tag :group_name, 'suscriptores' %>
-      <%= hidden_field_tag :group, 'ilamps' %>
+      <%= hidden_field_tag :group, 'newsletter' %>
       <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
       <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
     <%= submit_tag "Enviar" %>

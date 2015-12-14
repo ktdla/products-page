@@ -41,19 +41,6 @@ $(document).ready(function () {
     //var elements = $("#"+categoryProduct)
   });
 
-  //filter categories from home
-  // $('#navigation-menu li').click(function(){
-  //   var name = $(this).text().toLowerCase();
-  //   $(".products article").hide();
-  //   $("."+name).show();
-  //   window.history.replaceState(category, name, name);
-  // });
-  // var url = window.location.href
-  // var arr = url.split("#");
-  // var category = arr[1].toLowerCase();
-  // $(".products article").hide();
-  // $("."+category).show();
-
   //popup
   $('.popup-vimeo').magnificPopup({
     disableOn: 700,
