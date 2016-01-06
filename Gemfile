@@ -53,6 +53,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'dragonfly-s3_data_store'
 end
 
 group :staging do
