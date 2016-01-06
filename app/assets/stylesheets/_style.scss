@@ -92,6 +92,8 @@ button {
   width: 300px;
 }
 .process {
+  background-image: url('proceso-background.jpg');
+  color: white;
   article {
     position: relative;
     @include span-columns(3);
@@ -158,6 +160,8 @@ button {
 }
 .team {
   overflow: hidden;
+  background-image: url('equipo-background.jpg');
+  color: white;
   .container { overflow: hidden; }
   article {
     @include span-columns(6);
