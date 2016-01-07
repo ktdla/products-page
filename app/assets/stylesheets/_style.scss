@@ -212,6 +212,9 @@ button {
 }
 .sponsor {
   overflow: hidden;
+  background-image: url('auspiciadores-background.jpg');
+  color: white;
+  padding-bottom: 75px;
   h2 { margin-bottom: 0; }
   article {
     @include span-columns(3);
@@ -221,6 +224,8 @@ button {
       display: block;
       margin: 0 auto;
       padding-bottom: 10px;
+      max-width: auto;
+      height: 70px;
     }
     &:nth-child(2n+3) { margin-right: 0; }
   }
@@ -452,7 +457,11 @@ button {
 .main { position: relative; }
 .category {
   text-align: center;
-  h2 { margin-top: 40px; }
+  &>img {
+    height: auto;
+    width: 600px;
+  }
+  h2 { margin-top: 10px; }
   position: absolute;
   top: 50%;
   left: 50%;
