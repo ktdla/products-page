@@ -56,9 +56,9 @@
             <%= hidden_field_tag :group, 'newsletter' %>
             <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9n._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
             <% if locale.to_s == "es" %>
-            <%= submit_tag "Suscríbete a nuestras noticias" %>
+            <%= submit_tag "Bienvenido a iFurniture" %>
             <% else %>
-            <%= submit_tag "Subscribe to newsletter" %>
+            <%= submit_tag "Welcome to iFurniture" %>
             <% end %>
           <% end %>
         </div>

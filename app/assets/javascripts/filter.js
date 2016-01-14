@@ -7,9 +7,19 @@ $(document).ready(function () {
   //slides
   $(function() {
   $(".slides").slidesjs({
-    height: 50,
+    height: 80,
     play: {
-      auto: true
+      auto: true,
+      interval: 15000
+    },
+    effect: {
+      slide: {
+        speed: 8000
+      },
+      fade: {
+        speed: 8000,
+        crossfade: true
+      }
     }
   });
   });

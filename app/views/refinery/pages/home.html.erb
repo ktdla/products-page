@@ -4,49 +4,54 @@
   <%= image_tag 'background-image.jpg' %>
 </section>
 <section class="container slider">
-  <h2>Bienvenido a iFurniture</h2>
+  <h2>Somos iFurniture</h2>
   <div class="slides">
-    <p>“[iFurniture] es un StartUp que se basa en el diseño innovador y fabricación digital de mobiliarios personalizados.”</p>
-    <p>“De características móviles, flexibles, modulares, transformables, ahorradores de espacio hasta llegar a la robótica para muebles.”</p>
-    <p>“Utilizamos la tecnología CNC (Corte por Control Numérico Computarizado) y la fabricación digital con prototipados rápidos en escala real. (Fab Lab)”</p>
-    <p>“Nuevas líneas de diseño: Lámparas Paramétricas, mobiliarios de Co-Working, mobiliarios para Niños y para el hogar.”</p>
-    <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú."</p>
+    <p>“Nuestro emprendimiento nace a raíz de contar con una herencia familiar en la industria de la carpintería que se combina con el conocimiento de tecnologías digitales para el diseño de innovación de muebles, sumando todos estos componentes a un conocimiento base, proponemos un híbrido que es iFurniture, mobiliarios innovadores con fabricación digital.”</p>
+    <p>“Somos una empresa moderna, digital de base tecnológica que potencia el diseño y proceso de fabricación de muebles personalizados, flexibles, modulares, transformables, ahorradores de espacio, acercándonos a la robótica para muebles.”</p>
+    <p>“Un enfoque diferente para la fabricación y venta de muebles en el Perú, rápido, efectivo y personalizado, pensando en la necesidad del usuario y en los nuevos espacios innovadores.”</p>
+    <p>"En nuestro proceso de fabricación utilizamos la tecnología CNC (Corte por Control Numérico Computarizado) y la fabricación digital (Fab Lab) con prototipados rápidos en escala real para desarrollar nuevas líneas de diseño."</p>
+    <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú para la venta de productos, servicios e implementación de espacios."</p>
   </div>
 </section>
 <section class="process">
   <div class="container">
-    <h2>Proceso de compra</h2>
+    <h2>Cómo funciona</h2>
     <article>
       <%= image_tag 'proceso/1.png' %>
-      <span>Paso 1 para la compra</span>
+      <h4>Elige</h4>
+      <span>Visita nuestros productos</span>
     </article>
     <article>
       <%= image_tag 'proceso/2.png' %>
-      <span>Paso 2 para la compra</span>
+      <h4>Personaliza</h4>
+      <span>Obtén un mueble a tu medida</span>
     </article>
     <article>
       <%= image_tag 'proceso/3.png' %>
-      <span>Paso 3 para la compra</span>
+      <h4>Pídelo</h4>
+      <span>Solicita tu producto</span>
     </article>
     <article>
       <%= image_tag 'proceso/4.png' %>
-      <span>Paso 4 para la compra</span>
+      <h4>Disfrútalo</h4>
+      <span>Recibe tu mueble a domicilio</span>
     </article>
-    <button>Empieza comprando ahora</button>
+    <button>Comienza ahora</button>
   </div>
 </section>
 <section class="container categories">
-  <h2>Productos</h2>
+  <h2>Colecciones</h2>
   <article>
     <div class="container-overlay">
     <% if locale.to_s == 'es' %>
-      <a href="/ilamps">
+      <a href="/ilamp">
     <% else %>
-      <a href="/en/ilamps">
+      <a href="/en/ilamp">
     <% end %>
         <div class="overlay"></div>
+        <h3>iLamp</h3>
+        <span>Lámparas paramétricas</span>
         <div class="info">
-          <h3>iLamps</h3>
           <i class="fa fa-search-plus"></i>
         </div>
         <%= image_tag 'categorias/ilamps.jpg' %>
@@ -61,8 +66,9 @@
         <a href="/en/icoworking">
       <% end %>
         <div class="overlay"></div>
+        <h3>iCoworking</h3>
+        <span>Mobiliarios para emprendedores</span>
         <div class="info">
-          <h3>iCoworking</h3>
           <i class="fa fa-search-plus"></i>
         </div>
         <%= image_tag 'categorias/icoworking.jpg' %>
@@ -77,8 +83,9 @@
         <a href="/en/ihome">
       <% end %>
         <div class="overlay"></div>
+        <h3>iHome</h3>
+        <span>Rediseña tu casa</span>
         <div class="info">
-          <h3>iHome</h3>
           <i class="fa fa-search-plus"></i>
         </div>
         <%= image_tag 'categorias/ihome.jpg' %>
@@ -93,6 +100,8 @@
         <a href="/en/ikids">
       <% end %>
         <div class="overlay"></div>
+        <h3>iKids</h3>
+        <span>Mobiliarios para niños</span>
         <div class="info">
           <h3>iKids</h3>
           <i class="fa fa-search-plus"></i>
@@ -109,11 +118,29 @@
         <a href="/en/ibaby">
       <% end %>
         <div class="overlay"></div>
+        <h3>iBaby</h3>
+        <span>Cunas paramétricas</span>
         <div class="info">
-          <h3>iBaby</h3>
           <i class="fa fa-search-plus"></i>
         </div>
         <%= image_tag 'categorias/ikids.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ichristmas">
+      <% else %>
+        <a href="/en/ichristmas">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iChristmas</h3>
+        <span>Accesorios digitales</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ichristmas.jpg' %>
       </a>
     </div>
   </article>
@@ -125,16 +152,16 @@
       <div class="horizontal-center">
         <%= image_tag 'equipo/Vane.jpg' %>
         <div class="description">
-          <span>Nombre y Apellido</span>
+          <span>Vaneza Caycho </span>
           <p>“Nam porttitor lorem ipsum dolor sit amet consectetur.”</p>
           <div class="social-profiles">
-            <a href="https://www.google.com" target="_blank">
+            <a href="https://pe.linkedin.com/in/vaneza-caycho-ñuflo-244b8aa3" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
             </a>
-            <a href="https://www.google.com" target="_blank">
+            <a href="https://twitter.com/vanezadeperu" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
             </a>
-            <a href="https://www.google.com" target="_blank">
+            <a href="mailto:vaneza@ifurniture.pe">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
             </a>
           </div>
@@ -145,16 +172,16 @@
       <div class="horizontal-center">
         <%= image_tag 'equipo/Marita.jpg' %>
         <div class="description">
-          <span>Nombre y Apellido</span>
+          <span>Marita Ccollcca</span>
           <p>“Nam porttitor lorem ipsum dolor sit amet consectetur.”</p>
           <div class="social-profiles">
-            <a href="https://www.google.com" target="_blank">
+            <a href="https://twitter.com/ifurniturePE" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
             </a>
-            <a href="https://www.google.com" target="_blank">
+            <a href="https://twitter.com/ifurniturePE" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
             </a>
-            <a href="https://www.google.com" target="_blank">
+            <a href="mailto:marita@ifurniture.pe">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
             </a>
           </div>
@@ -178,7 +205,7 @@
 </section>
 <section class="sponsor">
   <div class="container">
-    <h2>Apoyaron a iFurniture</h2>
+    <h2>Nuestros aliados</h2>
     <article>
       <%= image_tag 'auspiciadores/equipu.png' %>
       <span>Apoyó en algo</span>
