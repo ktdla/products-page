@@ -16,29 +16,33 @@
         <ul id="navigation-menu">
           <% if locale.to_s == "es" %>
             <%= link_to_in_li "Inicio", '/' %>
-            <%= link_to_in_li "Blog", '/blog' %>
-            <li class="collection"><a>Colecciones<i class="fa fa-sort-desc"></i></a>
+            <li class="collection"><a>Colección<i class="fa fa-sort-desc"></i></a>
               <ul id="collection">
-                <%= link_to_in_li "iLamps", '/ilamps' %>
+                <%= link_to_in_li "iLamp", '/ilamp' %>
                 <%= link_to_in_li "iKids", '/ikids' %>
                 <%= link_to_in_li "iCoworking", '/icoworking' %>
                 <%= link_to_in_li "iHome", '/ihome' %>
                 <%= link_to_in_li "iBaby", '/ibaby' %>
+                <%= link_to_in_li "iChristmas", '/ichristmas' %>
               </ul>
             </li>
-            <li><button class="suscribe">Suscríbete</button></li>
+            <%= link_to_in_li "Cómo comprar", '#' %>
+            <%= link_to_in_li "Blog", '/blog' %>
+            <li><button class="suscribe">Suscribirse</button></li>
           <% else locale.to_s == "en" %>
             <%= link_to_in_li "Home", '/' + locale.to_s  %>
-            <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
             <li class="collection"><a>Colections<i class="fa fa-sort-desc"></i></a>
               <ul id="collection">
-                <%= link_to_in_li "iLamps", '/' + locale.to_s + '/ilamps' %>
+                <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamp' %>
                 <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids' %>
                 <%= link_to_in_li "iCoworking", '/' + locale.to_s + '/icoworking' %>
-                <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
+                <%= link_to_in_li "iHome", '/' + locale.to_s + '/ihome' %>
                 <%= link_to_in_li "iBaby", '/' + locale.to_s + '/ibaby' %>
+                <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
               </ul>
             </li>
+            <%= link_to_in_li "How to buy", '/' + locale.to_s + '#'  %>
+            <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
             <li><button class="suscribe">Subscribe</button></li>
           <% end %>
         </ul>
@@ -67,29 +71,30 @@
   <ul id="navigation-menu">
     <% if locale.to_s == "es" %>
       <%= link_to_in_li "Inicio", '/' %>
-      <%= link_to_in_li "Blog", '/blog' %>
-      <li class="collection"><a>Colecciones<i class="fa fa-sort-desc"></i></a>
+      <li class="collection"><a>Colección<i class="fa fa-sort-desc"></i></a>
         <ul id="collection-responsive">
-          <%= link_to_in_li "iLamps", '/ilamps' %>
+          <%= link_to_in_li "iLamp", '/ilamp' %>
           <%= link_to_in_li "iKids", '/ikids' %>
           <%= link_to_in_li "iCoworking", '/icoworking' %>
+          <%= link_to_in_li "iHome", '/ihome' %>
           <%= link_to_in_li "iBaby", '/ibaby' %>
           <%= link_to_in_li "iChristmas", '/ichristmas' %>
         </ul>
       </li>
+      <%= link_to_in_li "Blog", '/blog' %>
     <% else locale.to_s == "en" %>
       <%= link_to_in_li "Home", '/' + locale.to_s  %>
-      <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog' %>
       <li class="collection"><a>Collections<i class="fa fa-sort-desc"></i></a>
               <ul id="collection-responsive">
-                <%= link_to_in_li "iLamps", '/' + locale.to_s + '/ilamps' %>
+                <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamps' %>
                 <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids' %>
                 <%= link_to_in_li "iCoworking", '/' + locale.to_s + 'icoworking' %>
+                <%= link_to_in_li "iHome", '/' + locale.to_s + 'ihome' %>
                 <%= link_to_in_li "iChristmas", '/' + locale.to_s + 'ichristmas' %>
                 <%= link_to_in_li "iBaby", '/' + locale.to_s + 'ibaby' %>
               </ul>
             </li>
-      <li><button class="suscribe">Subscribe</button></li>
+      <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog' %>
     <% end %>
   </ul>
 </nav>
