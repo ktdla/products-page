@@ -1,7 +1,7 @@
 <section class="main background-image">
   <div class="category">
-    <%= image_tag 'logos/ilamps.png' %>
-    <h2>Breve descripción de la linea del producto</h2>
+    <%= image_tag 'logos/ichristmas.png' %>
+    <h2>Accesorios digitales</h2>
     <a class="popup-vimeo" href="https://vimeo.com/45830194"><%= image_tag 'reproductor.png' %></a>
   </div>
 </section>
@@ -47,26 +47,30 @@
     <% end %>
   </div>
 </section>
-<section class="background-image process">
+<section class="process">
   <div class="container">
-    <h2>Proceso de compra</h2>
+    <h2>Cómo funciona</h2>
     <article>
       <%= image_tag 'proceso/1.png' %>
-      <span>Paso 1 para la compra</span>
+      <h4>Elige</h4>
+      <span>Visita nuestros productos</span>
     </article>
     <article>
       <%= image_tag 'proceso/2.png' %>
-      <span>Paso 2 para la compra</span>
+      <h4>Personaliza</h4>
+      <span>Obtén un mueble a tu medida</span>
     </article>
     <article>
       <%= image_tag 'proceso/3.png' %>
-      <span>Paso 3 para la compra</span>
+      <h4>Pídelo</h4>
+      <span>Solicita tu producto</span>
     </article>
     <article>
       <%= image_tag 'proceso/4.png' %>
-      <span>Paso 4 para la compra</span>
+      <h4>Disfrútalo</h4>
+      <span>Recibe tu mueble a domicilio</span>
     </article>
-    <button>Empieza comprando ahora</button>
+    <button>Comienza ahora</button>
   </div>
 </section>
 <section class="register">
@@ -75,7 +79,7 @@
       <h2>Regístrate para recibir</h2>
       <%= form_tag '/suscribir', target: "_top" do %>
         <%= hidden_field_tag :group_name, 'suscriptores' %>
-        <%= hidden_field_tag :group, 'iLamps' %>
+        <%= hidden_field_tag :group, 'iChristmas' %>
         <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
         <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
       <%= submit_tag "Enviar" %>
@@ -84,7 +88,7 @@
       <h2>Register for ...</h2>
       <%= form_tag '/suscribir', target: "_top" do %>
         <%= hidden_field_tag :group_name, 'suscriptores' %>
-        <%= hidden_field_tag :group, 'iLamps' %>
+        <%= hidden_field_tag :group, 'iChristmas' %>
         <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
         <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
       <%= submit_tag "Submit" %>

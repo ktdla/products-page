@@ -277,7 +277,6 @@ button {
 }
 .register {
   text-align: center;
-  border-top: 2px solid $light-gray;
   input {
     -webkit-appearance: none;
     font-size: 18px;
@@ -478,8 +477,8 @@ button {
 .category {
   text-align: center;
   &>img {
-    height: auto;
-    width: 600px;
+    height: 180px;
+    width: auto;
   }
   h2 { margin-top: 10px; }
   position: absolute;

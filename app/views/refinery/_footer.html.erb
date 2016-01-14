@@ -15,17 +15,17 @@
       <% end %>
     </ul>
     <ul class="social-links">
-      <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-      <li><a href="https://twitter.com/iFurniturePE" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+      <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/iFurniturePE" target="_blank"><i class="fa fa-twitter"></i></a></li>
       <li><a href="https://www.instagram.com/iFurniturePE/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://es.pinterest.com/ifurniturepe/" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+      <li><a href="https://es.pinterest.com/ifurniturepe/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
       <li><a href="https://vimeo.com/ifurniturepe" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-      <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><i class="fa fa-youtube"></i></a></li>
     </ul>
     <% if locale.to_s == "es" %>
     <ul class="copyright">
-      <li>Hecho en Perú</li>
-      <li><%= t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %></li>
+      <li><%= t('.copyright', :year => Time.now.year, :site_name => ', Interactive Furniture SAC.') %></li>
+      <li>Hecho en Perú. Todos los derechos reservados.</li>
     </ul>
     <%= link_to "Desarrollado por devAcademy", "https://devacademy.la", :target => "_blank" %>
     <% else %>
@@ -39,20 +39,33 @@
   <nav class="right">
     <ul id="navigation-menu">
       <% if locale.to_s == "es" %>
-        <%= link_to_in_li "iLamps", '/ilamps' %>
+        <%= link_to_in_li "iLamp", '/ilamp' %>
         <%= link_to_in_li "iKids", '/ikids' %>
         <%= link_to_in_li "iCoworking", '/icoworking' %>
         <%= link_to_in_li "iHome", '/ihome' %>
         <%= link_to_in_li "iBaby", '/ibaby' %>
+        <%= link_to_in_li "iChristmas", '/ichristmas' %>
       <% else locale.to_s == "en" %>
-        <%= link_to_in_li "iLamps", '/' + locale.to_s + '/ilamps'  %>
+        <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamp'  %>
         <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids'  %>
         <%= link_to_in_li "iCoworking", '/' + locale.to_s + '/icoworking' %>
         <%= link_to_in_li "iHome", '/' + locale.to_s + '/ihome' %>
         <%= link_to_in_li "iBaby", '/' + locale.to_s + '/ibaby' %>
+        <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
       <% end %>
     </ul>
+    <div class="fb-like" data-href="https://www.facebook.com/iFurniturePE/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <a href="https://twitter.com/ifurniturePE" class="twitter-follow-button" data-show-count="true">Follow @ifurniturePE</a>
   </nav>
 </div>
 
 <script id="dsq-count-scr" src="//ifurniture.disqus.com/count.js" async></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
