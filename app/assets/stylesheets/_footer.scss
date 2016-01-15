@@ -47,6 +47,7 @@ footer {
       margin-bottom: 0;
       li:first-child { display: inline-block; }
     }
+    img:first-child { margin-right: 10px; }
   }
   .left {
     @include span-columns(3);

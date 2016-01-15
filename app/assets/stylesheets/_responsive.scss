@@ -95,8 +95,8 @@
     p { padding: 0 20px; }
   }
   .categories article {
-    width: 47%;
-    margin-right: 6%;
+    @include span-columns(6);
+    &:nth-child(2n) { margin-right: 0; }
   }
   .team article .horizontal-center { width: 100%; }
   .team article, .news .post, .news .posts {
@@ -106,6 +106,7 @@
     &:last-child { margin-bottom: 0; }
   }
   .news .post:nth-child(4) { margin-bottom: 20px; }
+  .process { background-repeat: repeat; }
   .process .container article {
     width: 49%;
     margin-right: 2%;
@@ -255,6 +256,10 @@
   #blog_post p, #blog_post img { width: 100%; }
   #comments input, #comments textarea { margin-right: 0; }
   #comments input[type="submit"] { width: 100%; }
+  .sponsor article {
+    @include span-columns(6);
+    &:nth-child(2n+1) { margin-right:0; }
+  }
   footer {
     .left {
       width: 25%;
