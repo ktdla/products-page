@@ -62,6 +62,21 @@ $(document).ready(function () {
     fixedContentPos: false
   });
 
+ // animated scroll
+  var links = ["#register", "#process", "#ilamp-register", "#ikids-register", "#icoworking-register", "#ihome-register", "#ichristmas-register", "#ibaby-register"];
+  $(links).each(function (unused, value) {
+    $('a[href="' + value + '"]').on("click", function (event) {
+      event.preventDefault();
+      var pos;
+      if ($(window).scrollTop() < 10) {
+        pos = 180;
+      } else {
+        pos = 57;
+      }
+      $("body, html").animate({ scrollTop: $(value).offset().top - pos}, 1000);
+    });
+  });
+
 //map
   $('#map').addClass('scrolloff');
     $('#overlay').on("mouseup",function(){

@@ -47,7 +47,7 @@
     <% end %>
   </div>
 </section>
-<section class="process">
+<section id="process" class="process">
   <div class="container">
     <h2>Cómo funciona</h2>
     <article>
@@ -70,13 +70,13 @@
       <h4>Disfrútalo</h4>
       <span>Recibe tu mueble a domicilio</span>
     </article>
-    <button>Comienza ahora</button>
+    <a href="#ibaby-register"><button>Comienza ahora</button></a>
   </div>
 </section>
-<section class="register">
+<section id="ibaby-register" class="register">
   <div class="container">
     <% if locale.to_s == "es" %>
-      <h2>Regístrate para recibir</h2>
+      <h2>Regístrate para recibir más información</h2>
       <%= form_tag '/suscribir', target: "_top" do %>
         <%= hidden_field_tag :group_name, 'suscriptores' %>
         <%= hidden_field_tag :group, 'iBaby' %>
@@ -85,7 +85,7 @@
       <%= submit_tag "Enviar" %>
       <% end %>
     <% else %>
-      <h2>Register for ...</h2>
+      <h2>Register for more information</h2>
       <%= form_tag '/suscribir', target: "_top" do %>
         <%= hidden_field_tag :group_name, 'suscriptores' %>
         <%= hidden_field_tag :group, 'iBaby' %>

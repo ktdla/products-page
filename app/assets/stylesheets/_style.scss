@@ -56,11 +56,17 @@ input, textarea {
   outline: 0;
 }
 
-//home
-.background-image {
+.ilamp, .ikids, .ibaby, .icoworking, .ichristmas, .ihome { color: white; }
+.ilamp { background-image: url('categorias/ilamp-background.jpg'); }
+.ikids { background-image: url('categorias/ikids-background.jpg');}
+.ihome { background-image: url('categorias/ihome-background.jpg');}
+.icoworking { background-image: url('categorias/icoworking-background.jpg');}
+
+.background-image { 
   background-image: url('background-image.jpg');
   color: white;
 }
+
 .main, .main-video {
   position: relative;
   height: 550px;
@@ -474,6 +480,10 @@ button {
   ul { display: none; }
 }
 .main { position: relative; }
+.collection-main { 
+  position: relative;
+  height: 500px; 
+}
 .category {
   text-align: center;
   &>img {

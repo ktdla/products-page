@@ -26,7 +26,7 @@
                 <%= link_to_in_li "iChristmas", '/ichristmas' %>
               </ul>
             </li>
-            <%= link_to_in_li "Cómo comprar", '#' %>
+            <%= link_to_in_li "Cómo comprar", '#process' %>
             <%= link_to_in_li "Blog", '/blog' %>
             <li><button class="suscribe">Suscribirse</button></li>
           <% else locale.to_s == "en" %>
@@ -41,7 +41,7 @@
                 <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
               </ul>
             </li>
-            <%= link_to_in_li "How to buy", '/' + locale.to_s + '#'  %>
+            <%= link_to_in_li "How to buy", '/' + locale.to_s + '#process'  %>
             <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
             <li><button class="suscribe">Subscribe</button></li>
           <% end %>

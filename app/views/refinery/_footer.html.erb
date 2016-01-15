@@ -15,12 +15,12 @@
       <% end %>
     </ul>
     <ul class="social-links">
-      <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://twitter.com/iFurniturePE" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://www.instagram.com/iFurniturePE/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://es.pinterest.com/ifurniturepe/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-      <li><a href="https://vimeo.com/ifurniturepe" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-      <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><%= image_tag "social/facebook.png" %></a></li>
+      <li><a href="https://twitter.com/iFurniturePE" target="_blank"><%= image_tag "social/twitter.png" %></a></li>
+      <li><a href="https://www.instagram.com/iFurniturePE/" target="_blank"><%= image_tag "social/instagram.png" %></a></li>
+      <li><a href="https://es.pinterest.com/ifurniturepe/" target="_blank"><%= image_tag "social/pinterest.png" %></a></li>
+      <li><a href="https://vimeo.com/ifurniturepe" target="_blank"><%= image_tag "social/vimeo.png" %></a></li>
+      <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><%= image_tag "social/youtube.png" %></a></li>
     </ul>
     <% if locale.to_s == "es" %>
     <ul class="copyright">
@@ -30,8 +30,8 @@
     <%= link_to "Desarrollado por devAcademy", "https://devacademy.la", :target => "_blank" %>
     <% else %>
     <ul class="copyright">
-      <li>Made in Peru</li>
-      <li><%= t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name) %></li>
+      <li><%= t('.copyright', :year => Time.now.year, :site_name => ', Interactive Furniture SAC.') %></li>
+      <li>Made in Peru. All rights reserved.</li>
     </ul>
     <%= link_to "Develop for devAcademy", "https://devacademy.la", :target => "_blank" %>
     <% end %>

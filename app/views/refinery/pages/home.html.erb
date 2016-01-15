@@ -13,7 +13,7 @@
     <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú para la venta de productos, servicios e implementación de espacios."</p>
   </div>
 </section>
-<section class="process">
+<section id="process" class="process">
   <div class="container">
     <h2>Cómo funciona</h2>
     <article>
@@ -36,7 +36,7 @@
       <h4>Disfrútalo</h4>
       <span>Recibe tu mueble a domicilio</span>
     </article>
-    <button>Comienza ahora</button>
+    <a href="#register"><button>Comienza ahora</button></a>
   </div>
 </section>
 <section class="container categories">
@@ -207,19 +207,23 @@
   <div class="container">
     <h2>Nuestros aliados</h2>
     <article>
-      <%= image_tag 'auspiciadores/equipu.png' %>
-      <span>Apoyó en algo</span>
-    </article>
-    <article>
       <%= image_tag 'auspiciadores/fablab.png' %>
       <span>Apoyó en algo</span>
     </article>
     <article>
-      <%= image_tag 'auspiciadores/fablabtecsup.png' %>
+      <%= image_tag 'auspiciadores/starupperu.png' %>
       <span>Apoyó en algo</span>
     </article>
     <article>
-      <%= image_tag 'auspiciadores/starscamp.png' %>
+      <%= image_tag 'auspiciadores/cisanmarcos.png' %>
+      <span>Apoyó en algo</span>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/equipu.png' %>
+      <span>Apoyó en algo</span>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/fablabtecsup.png' %>
       <span>Apoyó en algo</span>
     </article>
     <article>
@@ -231,14 +235,14 @@
       <span>Apoyó en algo</span>
     </article>
     <article>
-      <%= image_tag 'auspiciadores/starupperu.png' %>
+      <%= image_tag 'auspiciadores/starscamp.png' %>
       <span>Apoyó en algo</span>
     </article>
   </div>
 </section>
-<section class="container subscription">
+<section id="register" class="container subscription">
   <% if locale.to_s == 'es' %>
-    <h2>Regístrate para recibir...</h2>
+    <h2>Regístrate para recibir más información</h2>
     <article class="contact">
       <%= form_tag '/suscribir', target: "_top" do %>
       <div class="left">
@@ -253,7 +257,7 @@
       <% end %>
     </article>
   <% else %>
-    <h2>Register for...</h2>
+    <h2>Register for more information</h2>
     <article class="contact">
       <%= form_tag '/suscribir', target: "_top" do %>
       <div class="left">
