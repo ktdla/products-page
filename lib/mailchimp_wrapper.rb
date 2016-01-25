@@ -19,6 +19,7 @@ module MailchimpWrapper
     merge_vars[:fname] = user[:first_name] unless user[:first_name].blank?
     merge_vars[:lname] = user[:last_name] unless user[:last_name].blank?
     merge_vars[:city] = user[:city] unless user[:city].blank?
+    merge_vars[:phone] = user[:phone] unless user[:phone].blank?
     merge_vars[:comment] = user[:comment] unless user[:comment].blank?
     groupings = { 0 => { name: group_name, groups: [group] } } if group_name && group
     merge_vars[:groupings] = groupings

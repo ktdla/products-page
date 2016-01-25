@@ -1,21 +1,40 @@
-<section class="main-video">
-  <h1>Carpintería Digital</h1>
-  <%= video_tag "ifoficial.mp4", :autoplay => true, :loop => true %>
-  <%= image_tag 'background-image.jpg' %>
-</section>
-<section class="container slider">
-  <h2>Somos iFurniture</h2>
-  <div class="slides">
-    <p>“Nuestro emprendimiento nace a raíz de contar con una herencia familiar en la industria de la carpintería que se combina con el conocimiento de tecnologías digitales para el diseño de innovación de muebles, sumando todos estos componentes a un conocimiento base, proponemos un híbrido que es iFurniture, mobiliarios innovadores con fabricación digital.”</p>
-    <p>“Somos una empresa moderna, digital de base tecnológica que potencia el diseño y proceso de fabricación de muebles personalizados, flexibles, modulares, transformables, ahorradores de espacio, acercándonos a la robótica para muebles.”</p>
-    <p>“Un enfoque diferente para la fabricación y venta de muebles en el Perú, rápido, efectivo y personalizado, pensando en la necesidad del usuario y en los nuevos espacios innovadores.”</p>
-    <p>"En nuestro proceso de fabricación utilizamos la tecnología CNC (Corte por Control Numérico Computarizado) y la fabricación digital (Fab Lab) con prototipados rápidos en escala real para desarrollar nuevas líneas de diseño."</p>
-    <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú para la venta de productos, servicios e implementación de espacios."</p>
-  </div>
-</section>
+<% if locale.to_s == 'es' %>
+  <section class="main-video">
+    <h1>Carpintería Digital</h1>
+    <%= video_tag "ifoficial.mp4", :autoplay => true, :loop => true %>
+    <%= image_tag 'background-image.jpg' %>
+  </section>
+  <section class="container slider">
+    <h2>Somos iFurniture</h2>
+    <div class="slides">
+      <p>“Nuestro emprendimiento nace a raíz de contar con una herencia familiar en la industria de la carpintería que se combina con el conocimiento de tecnologías digitales para el diseño de innovación de muebles, sumando todos estos componentes a un conocimiento base, proponemos un híbrido que es iFurniture, mobiliarios innovadores con fabricación digital.”</p>
+      <p>“Somos una empresa moderna, digital de base tecnológica que potencia el diseño y proceso de fabricación de muebles personalizados, flexibles, modulares, transformables, ahorradores de espacio, acercándonos a la robótica para muebles.”</p>
+      <p>“Un enfoque diferente para la fabricación y venta de muebles en el Perú, rápido, efectivo y personalizado, pensando en la necesidad del usuario y en los nuevos espacios innovadores.”</p>
+      <p>"En nuestro proceso de fabricación utilizamos la tecnología CNC (Corte por Control Numérico Computarizado) y la fabricación digital (Fab Lab) con prototipados rápidos en escala real para desarrollar nuevas líneas de diseño."</p>
+      <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú para la venta de productos, servicios e implementación de espacios."</p>
+    </div>
+  </section>
+<% else %>
+  <section class="main-video">
+    <h1>Digital Joinery</h1>
+    <%= video_tag "ifoficial.mp4", :autoplay => true, :loop => true %>
+    <%= image_tag 'background-image.jpg' %>
+  </section>
+  <section class="container slider">
+    <h2>Welcome to iFurniture</h2>
+    <div class="slides">
+      <p>“Our entrepreneurship comes in the wake of having a family heirloom in the woodworking industry combined with the knowledge of digital technologies for innovative furniture design, bringing all these components to a knowledge base, we propose a hybrid that is iFurniture, innovative furniture with digital fabrication.”</p>
+      <p>“We are a modern company, digital technology-based power design and custom manufacturing process of furniture, flexible, modular, transformable, space-saving, approaching robotics modern furniture.”</p>
+      <p>“A different approach to the manufacture and sale of furniture in Peru, fast, effective and personalized, thinking about the need for the user and new innovative spaces.”</p>
+      <p>"In our manufacturing process we use the technology CNC (computer numerical control cutting) and digital fabrication (Fab Lab) with rapid prototyping in real scale to develop new lines of design."</p>
+      <p>"From traditional to digital carpentry we generate a scalable high-impact project in woodworking industry of Peru for the sale of products, services and implementation of spaces."</p>
+    </div>
+  </section>
+<% end %>
+
 <section id="process" class="process">
   <div class="container">
-    <h2>Cómo funciona</h2>
+    <h2>¿Cómo funciona?</h2>
     <article>
       <%= image_tag 'proceso/1.png' %>
       <h4>Elige</h4>
@@ -36,7 +55,7 @@
       <h4>Disfrútalo</h4>
       <span>Recibe tu mueble a domicilio</span>
     </article>
-    <a href="#register"><button>Comienza ahora</button></a>
+    <a href="#register"><button>¡Comienza ahora!</button></a>
   </div>
 </section>
 <section class="container categories">
@@ -119,7 +138,7 @@
       <% end %>
         <div class="overlay"></div>
         <h3>iBaby</h3>
-        <span>Cunas paramétricas</span>
+        <span>Cunas y accesorios para bebés</span>
         <div class="info">
           <i class="fa fa-search-plus"></i>
         </div>
@@ -136,7 +155,7 @@
       <% end %>
         <div class="overlay"></div>
         <h3>iChristmas</h3>
-        <span>Accesorios digitales</span>
+        <span>Navidad digital</span>
         <div class="info">
           <i class="fa fa-search-plus"></i>
         </div>
@@ -153,7 +172,7 @@
         <%= image_tag 'equipo/Vane.jpg' %>
         <div class="description">
           <span>Vaneza Caycho </span>
-          <p>“Nam porttitor lorem ipsum dolor sit amet consectetur.”</p>
+          <p>“Un diseño innovador con tecnología digital puede transformar un espacio volviéndolo creativo e inspirador”</p>
           <div class="social-profiles">
             <a href="https://pe.linkedin.com/in/vaneza-caycho-ñuflo-244b8aa3" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
@@ -173,7 +192,7 @@
         <%= image_tag 'equipo/Marita.jpg' %>
         <div class="description">
           <span>Marita Ccollcca</span>
-          <p>“Nam porttitor lorem ipsum dolor sit amet consectetur.”</p>
+          <p>“Contribuimos con la mejora de un producto desde su fabricación industrial hasta su consumo en el mercado”</p>
           <div class="social-profiles">
             <a href="https://twitter.com/ifurniturePE" target="_blank">
               <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
@@ -208,41 +227,33 @@
     <h2>Nuestros aliados</h2>
     <article>
       <%= image_tag 'auspiciadores/fablab.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/starupperu.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/cisanmarcos.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/equipu.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/fablabtecsup.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/dev.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/utec.png' %>
-      <span>Apoyó en algo</span>
     </article>
     <article>
       <%= image_tag 'auspiciadores/starscamp.png' %>
-      <span>Apoyó en algo</span>
     </article>
   </div>
 </section>
 <section id="register" class="container subscription">
   <% if locale.to_s == 'es' %>
-    <h2>Regístrate para recibir más información</h2>
+    <h2>Pedidos y consultas</h2>
     <article class="contact">
       <%= form_tag '/suscribir', target: "_top" do %>
       <div class="left">
@@ -250,6 +261,7 @@
         <%= hidden_field_tag :group, 'home' %>
         <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
         <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :phone, nil, type: "text", placeholder: "Teléfono" %>
         <%= text_field_tag :city, nil, type: "text", placeholder: "Ciudad" %>
       </div>
       <%= text_area_tag :comment, nil, type: "text", placeholder: "Mensaje", maxlength: 255 %>
@@ -265,6 +277,7 @@
         <%= hidden_field_tag :group, 'home' %>
         <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
         <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :phone, nil, type: "text", placeholder: "Phone" %>
         <%= text_field_tag :city, nil, type: "text", placeholder: "City" %>
       </div>
       <%= text_area_tag :comment, nil, type: "text", placeholder: "Message", maxlength: 255 %>

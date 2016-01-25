@@ -49,7 +49,7 @@
 </section>
 <section id="process" class="process">
   <div class="container">
-    <h2>Cómo funciona</h2>
+    <h2>¿Cómo funciona?</h2>
     <article>
       <%= image_tag 'proceso/1.png' %>
       <h4>Elige</h4>
@@ -70,13 +70,13 @@
       <h4>Disfrútalo</h4>
       <span>Recibe tu mueble a domicilio</span>
     </article>
-    <a href="#ihome-register"><button>Comienza ahora</button></a>
+    <a href="#ihome-register"><button>¡Comienza ahora!</button></a>
   </div>
 </section>
 <section id="ihome-register" class="register">
   <div class="container">
     <% if locale.to_s == "es" %>
-      <h2>Regístrate para recibir más información</h2>
+      <h2>Pedidos y consultas</h2>
       <%= form_tag '/suscribir', target: "_top" do %>
         <%= hidden_field_tag :group_name, 'suscriptores' %>
         <%= hidden_field_tag :group, 'iHome' %>

@@ -8,11 +8,6 @@
     <ul class="contact">
       <li><a href="mailto:hello@ifurniture.pe"><i class="fa fa-envelope"></i> hola@ifurniture.pe</a></li>
       <li><a href="telf:+5112222222"><%=image_tag "phone.png" %> (01)-2222222</a></li>
-      <% if locale.to_s == "es" %>
-      <li><a href="/ubicacion"><i class="fa fa-map-marker"></i> Ubícanos</a></li>
-      <% else %>
-      <li><a href="/en/ubicacion"><i class="fa fa-map-marker"></i> Find us</a></li>
-      <% end %>
     </ul>
     <ul class="social-links">
       <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><%= image_tag "social/facebook.png" %></a></li>
@@ -25,7 +20,7 @@
     <% if locale.to_s == "es" %>
     <ul class="copyright">
       <li><%= t('.copyright', :year => Time.now.year, :site_name => ', Interactive Furniture SAC.') %></li>
-      <li>Hecho en Perú. Todos los derechos reservados.</li>
+      <li>StartUp Perú 2G. Todos los derechos reservados.</li>
     </ul>
     <%= link_to "Desarrollado por devAcademy", "https://devacademy.la", :target => "_blank" %>
     <% else %>

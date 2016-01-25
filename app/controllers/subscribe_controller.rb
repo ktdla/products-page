@@ -16,6 +16,7 @@ class SubscribeController < ApplicationController
       first_name: params[:first_name].try(:titleize),
       last_name: params[:last_name].try(:titleize),
       city: params[:city].try(:titleize),
+      phone: params[:phone],
       comment: params[:comment].try(:titleize)
     }
     user
